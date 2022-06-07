@@ -40,64 +40,7 @@
 
     <?= $this->renderSection('content'); ?>
 
-    <!-- ======= Footer ======= -->
-    <footer id="footer">
-        <div class="footer-top">
-            <div class="container-fluid">
-                <div class="row justify-content-center">
-                    <div class="col-xl-10">
-                        <div class="row">
 
-                            <div class="col-lg-5 footer-info">
-                                <h4>About SatSet Website</h4>
-                                <p>
-                                    Satset Website adalah Website yang <br>
-                                    menyediakan layanan jasa pembuatan <br>
-                                    macam website mulai dari paket yang <br>
-                                    tersedia hingga custom website</p>
-                                <div class="social-links mt-3">
-                                    <a href="https://id-id.facebook.com/fajaridn" class="facebook" target="_blank"><i class="bi bi-facebook"></i></a>
-                                    <a href="https://instagram.com/fajaridn/" class="instagram" target="_blank"><i class="bi bi-instagram"></i></i></a>
-                                    <a href="https://wa.me/6281936666423" class="whatsapp" target="_blank"><i class="bi bi-whatsapp"></i></i></a>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 footer-links">
-                                <h4>Useful Links</h4>
-                                <p> </p>
-                                <ul>
-                                    <li><i class="bx bx-chevron-right"></i> <a href="#hero">Home</a></li>
-                                    <li><i class="bx bx-chevron-right"></i> <a href="#paket">Paket Website</a></li>
-                                    <li><i class="bx bx-chevron-right"></i> <a href="#portfolio">Portfolio</a></li>
-                                    <li><i class="bx bx-chevron-right"></i> <a href="#ulasan">Ulasan</a></li>
-                                    <li><i class="bx bx-chevron-right"></i> <a href="https://wa.me/message/NWZAHPLLWVHSL1">Hubungi Kami</a></li>
-                                    <li><i class="bx bx-chevron-right"></i> <a href="#login">Login</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-lg-3 footer-contact">
-                                <h4>Contact Us</h4>
-                                <p>
-                                    Ketintang No.156<br>
-                                    Surabaya, Jawa Timur<br>
-                                    Indonesia <br>
-                                    <strong>Phone : </strong><a href="telp:6281936666423">+62819-3666-6423</a><br>
-                                    <strong>Email : </strong><a href="mailto:satsetwebsite@gmail.com">satsetwebsite@gmail.com</a><br>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="copyright">
-                &copy; Copyright <strong><span>SatSet Website</span></strong>. All Rights Reserved
-            </div>
-            <div class="credits">
-                Designed by SatSet Website
-            </div>
-        </div>
-    </footer><!-- End Footer -->
 
     <div id="preloader"></div>
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
