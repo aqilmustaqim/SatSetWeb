@@ -16,4 +16,7 @@ class Home extends BaseController
     public function ta(){
         return view('portfolio/index');
     }
+    public function dashboard(){
+        return view('dashboard/index');
+    }
 }
