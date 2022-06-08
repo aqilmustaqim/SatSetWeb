@@ -185,6 +185,7 @@
                 <img src="<?= base_url(); ?>/assets/ulasan/ulasan 0.png" class="card-img-top" alt="">
                 <div class="card-body">
                     <h5 class="card-title">Sergio de Paula</h5>
+                    <p class="card-text text-warning"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></i></p>
                     <p class="card-text">Melebihi harapan saya, SatSetWeb sangat profesional. informatif, dan memenuhi ekspetasi saya. Thanks SatSetWeb.</p>
                 </div>
             </div>
@@ -196,6 +197,7 @@
                 <img src="<?= base_url(); ?>/assets/ulasan/ulasan 0.png" class="card-img-top" alt="">
                 <div class="card-body">
                     <h5 class="card-title">Christopher Campbell</h5>
+                    <p class="card-text text-warning"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></p>
                     <p class="card-text">Keren banget, hasilnya diatas ekspetasi saya. Suka banget dengan pelayanannya, ramah ,fast respon, dan jujur. Terima kasih banyak atas kerja samanya!</p>
                 </div>
             </div>
@@ -206,6 +208,7 @@
                 <img src="<?= base_url(); ?>/assets/ulasan/ulasan 0.png" class="card-img-top" alt="">
                 <div class="card-body">
                     <h5 class="card-title">Štefan Štefančík</h5>
+                    <p class="card-text text-warning"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></p>
                     <p class="card-text">100% puas dengan hasil kerja SatSetWeb, sesuai dengan arahan dan keinginan saya. Komunikasi bagus, mantapp pokoknya. Tidak mengecewakan.</p>
                 </div>
             </div>
