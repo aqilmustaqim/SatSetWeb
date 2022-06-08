@@ -11,35 +11,49 @@
     <title>Kelola Portoflio</title>
   </head>
   <body>
-    <h1>Kelola Portfolio</h1>
-
     <div class="container">
+        <h1 class="text-center py-3">Kelola Portfolio</h1>
         <table class="table">
+            <button type="button" class="btn btn-success mb-3">Create New Portfolio</button>
         <thead>
             <tr>
-            <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
+            <th scope="col">No</th>
+            <th scope="col">Nama Web</th>
+            <th scope="col">Jenis Web</th>
+            <th scope="col">Publish</th>
+            <th scope="col">Status</th>
             </tr>
         </thead>
         <tbody>
             <tr>
             <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
+            <td>App Bakery</td>
+            <td>Sistem Informasi Web</td>
+            <td>Bebas Tim</td>
+            <td>
+            <button type="button" class="btn btn-warning">Edit</button>
+            <button type="button" class="btn btn-danger">Delete</button>
+            </td>
             </tr>
             <tr>
             <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
+            <td>App Bakery</td>
+            <td>Sistem Informasi Web</td>
+            <td>Bebas Tim</td>
+            <td>
+            <button type="button" class="btn btn-warning">Edit</button>
+            <button type="button" class="btn btn-danger">Delete</button>
+            </td>
             </tr>
             <tr>
             <th scope="row">3</th>
-            <td colspan="2">Larry the Bird</td>
-            <td>@twitter</td>
+            <td>App Bakery</td>
+            <td>Sistem Informasi Web</td>
+            <td>Bebas Tim</td>
+            <td>
+            <button type="button" class="btn btn-warning">Edit</button>
+            <button type="button" class="btn btn-danger">Delete</button>
+            </td>
             </tr>
         </tbody>
         </table>
