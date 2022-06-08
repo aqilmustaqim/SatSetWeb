@@ -179,11 +179,40 @@
             <p>Berikut ini adalah beberapa ulasan dari pelanggan kami.</p>
         </div>
 
-        <div class="justify-content-center">
-            <div class="testimonial-item text-center">
-                <img src="<?= base_url(); ?>/assets/ulasan/ulasan 1.png" class="testimonial-img" alt="">
+        <div class="row justify-content-center mx-3">
+            <div class="col-3">
+            <div class="card" style="width: 18rem;">
+                <img src="<?= base_url(); ?>/assets/ulasan/ulasan 0.png" class="card-img-top" alt="">
+                <div class="card-body">
+                    <h5 class="card-title">Sergio de Paula</h5>
+                    <p class="card-text">Melebihi harapan saya, SatSetWeb sangat profesional. informatif, dan memenuhi ekspetasi saya. Thanks SatSetWeb.</p>
+                </div>
             </div>
-        </div><!-- End testimonial-item -->
+            </div>
+
+
+            <div class="col-3">
+            <div class="card" style="width: 18rem;">
+                <img src="<?= base_url(); ?>/assets/ulasan/ulasan 0.png" class="card-img-top" alt="">
+                <div class="card-body">
+                    <h5 class="card-title">Christopher Campbell</h5>
+                    <p class="card-text">Keren banget, hasilnya diatas ekspetasi saya. Suka banget dengan pelayanannya, ramah ,fast respon, dan jujur. Terima kasih banyak atas kerja samanya!</p>
+                </div>
+            </div>
+            </div>
+
+            <div class="col-3">
+            <div class="card" style="width: 18rem;">
+                <img src="<?= base_url(); ?>/assets/ulasan/ulasan 0.png" class="card-img-top" alt="">
+                <div class="card-body">
+                    <h5 class="card-title">Štefan Štefančík</h5>
+                    <p class="card-text">100% puas dengan hasil kerja SatSetWeb, sesuai dengan arahan dan keinginan saya. Komunikasi bagus, mantapp pokoknya. Tidak mengecewakan.</p>
+                </div>
+            </div>
+            </div>
+        </div>
+        
+        <!-- End testimonial-item -->
     </div>
 </section><!-- End Ulasan Section -->
 
