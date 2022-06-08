@@ -137,11 +137,16 @@ h6 {
 */
 
 #btnlogin{
-  color: crimson;
+  color: white;
+  background-color: #3071a9;
+  border-radius: 8px;
+  justify-content: space-between;
+  padding: 8px 20px 8px 20px;
 }
 
 #btnlogin:hover{
-  color:darkorange;
+  color: black;
+  background-color: white;
 }
 
 .navbar {
@@ -162,7 +167,7 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 0 10px 30px;
+  padding: 10px 10px 10px 10px;
   text-transform: uppercase;
   font-size: 12px;
   font-weight: 600;
@@ -181,62 +186,6 @@ h6 {
 .navbar .active:focus,
 .navbar li:hover > a {
   color: #5697d0;
-}
-.navbar .dropdown ul {
-  display: block;
-  position: absolute;
-  left: 14px;
-  top: calc(100% + 30px);
-  margin: 0;
-  padding: 10px 0;
-  z-index: 99;
-  opacity: 0;
-  visibility: hidden;
-  background: #fff;
-  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
-  transition: 0.3s;
-}
-.navbar .dropdown ul li {
-  min-width: 200px;
-}
-.navbar .dropdown ul a {
-  padding: 10px 20px;
-  font-size: 13px;
-  font-weight: 500;
-  text-transform: none;
-  color: #193c5a;
-}
-.navbar .dropdown ul a i {
-  font-size: 12px;
-}
-.navbar .dropdown ul a:hover,
-.navbar .dropdown ul .active:hover,
-.navbar .dropdown ul li:hover > a {
-  color: #428bca;
-}
-.navbar .dropdown:hover > ul {
-  opacity: 1;
-  top: 100%;
-  visibility: visible;
-}
-.navbar .dropdown .dropdown ul {
-  top: 0;
-  left: calc(100% - 30px);
-  visibility: hidden;
-}
-.navbar .dropdown .dropdown:hover > ul {
-  opacity: 1;
-  top: 0;
-  left: 100%;
-  visibility: visible;
-}
-@media (max-width: 1366px) {
-  .navbar .dropdown .dropdown ul {
-    left: -90%;
-  }
-  .navbar .dropdown .dropdown:hover > ul {
-    left: -100%;
-  }
 }
 
 /**
@@ -306,35 +255,6 @@ h6 {
 .navbar-mobile .getstarted,
 .navbar-mobile .getstarted:focus {
   margin: 15px;
-}
-.navbar-mobile .dropdown ul {
-  position: static;
-  display: none;
-  margin: 10px 20px;
-  padding: 10px 0;
-  z-index: 99;
-  opacity: 1;
-  visibility: visible;
-  background: #fff;
-  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
-}
-.navbar-mobile .dropdown ul li {
-  min-width: 200px;
-}
-.navbar-mobile .dropdown ul a {
-  padding: 10px 20px;
-  font-size: 14px;
-}
-.navbar-mobile .dropdown ul a i {
-  font-size: 12px;
-}
-.navbar-mobile .dropdown ul a:hover,
-.navbar-mobile .dropdown ul .active:hover,
-.navbar-mobile .dropdown ul li:hover > a {
-  color: #428bca;
-}
-.navbar-mobile .dropdown > .dropdown-active {
-  display: block;
 }
 
 /*--------------------------------------------------------------
