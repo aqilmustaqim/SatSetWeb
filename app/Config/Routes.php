@@ -38,6 +38,7 @@ $routes->set404Override();
 $routes->get('/', 'Home::index');
 $routes->get('/login', 'Auth::login');
 $routes->get('/manageportfolio', 'Home::ta');
+$routes->get('/dashboard', 'Home::dashboard');
 
 /*
  * --------------------------------------------------------------------

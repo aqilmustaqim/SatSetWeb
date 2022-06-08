@@ -15,7 +15,7 @@
                             <label class="form-label" for="typePasswordX-2">Password</label>
                             <input type="password" id="typePasswordX-2" class="form-control form-control-lg" />
                         </div>
-                        <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
+                        <button class="btnlogin" type="submit"><a class="a_login" href="<?=base_url('dashboard')?>">Login</a></button>
                     </div>
                 </div>
             </div>
