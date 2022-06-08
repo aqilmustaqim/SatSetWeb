@@ -12,4 +12,8 @@ class Home extends BaseController
 
         return view('home/index', $data);
     }
+
+    public function ta(){
+        return view('portfolio/index');
+    }
 }
