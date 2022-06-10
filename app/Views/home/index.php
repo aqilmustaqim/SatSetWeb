@@ -237,14 +237,13 @@
                     <input type="email" class="form-control" id="inputEmail" placeholder="Masukkan Email">
                 </div>
                 <div class="mt-3 sm">
-                    <label for="inputAddress" class="form-label">Alamat</label>
+                    <label for="inputAddress" class="form-label">Nomor WA</label>
                     <input type="text" class="form-control" id="inputAddress" placeholder="Masukkan Alamat">
                 </div>
                 <div class="mt-3 sm">
                     <label for="inputPaket" class="form-label">Paket</label>
                     <select id="inputPaket" class="form-select">
-                        <option selected>Pilih Paket</option>
-                        <option>Blog Pribadi</option>
+                        <option setActive>Blog Pribadi</option>
                         <option>Website Perusahaan</option>
                         <option>Toko Online</option>
                         <option>Website Donasi</option>
