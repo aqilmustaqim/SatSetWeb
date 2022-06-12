@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.3
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 08, 2022 at 10:20 AM
--- Server version: 10.4.22-MariaDB
--- PHP Version: 7.4.28
+-- Waktu pembuatan: 12 Jun 2022 pada 10.26
+-- Versi server: 10.4.24-MariaDB
+-- Versi PHP: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,23 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `migrations`
+-- Struktur dari tabel `formulir`
+--
+
+CREATE TABLE `formulir` (
+  `id` int(11) UNSIGNED NOT NULL,
+  `nama` varchar(50) NOT NULL,
+  `email` varchar(128) NOT NULL,
+  `nomor_wa` varchar(20) NOT NULL,
+  `jenis_paket` varchar(30) NOT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `migrations`
 --
 
 CREATE TABLE `migrations` (
@@ -38,17 +54,34 @@ CREATE TABLE `migrations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `migrations`
+-- Dumping data untuk tabel `migrations`
 --
 
 INSERT INTO `migrations` (`id`, `version`, `class`, `group`, `namespace`, `time`, `batch`) VALUES
 (1, '2022-06-08-063143', 'App\\Database\\Migrations\\Users', 'default', 'App', 1654670141, 1),
-(2, '2022-06-08-063157', 'App\\Database\\Migrations\\UserRole', 'default', 'App', 1654670141, 1);
+(2, '2022-06-08-063157', 'App\\Database\\Migrations\\UserRole', 'default', 'App', 1654670141, 1),
+(3, '2022-06-08-083151', 'App\\Database\\Migrations\\Portfolio', 'default', 'App', 1655022304, 2),
+(4, '2022-06-10-152815', 'App\\Database\\Migrations\\Formulir', 'default', 'App', 1655022304, 2);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Struktur dari tabel `portfolio`
+--
+
+CREATE TABLE `portfolio` (
+  `id` int(11) UNSIGNED NOT NULL,
+  `nama` varchar(128) NOT NULL,
+  `deskripsi` text NOT NULL,
+  `jenis` varchar(128) NOT NULL,
+  `gambar` varchar(128) NOT NULL,
+  `link` varchar(128) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `users`
 --
 
 CREATE TABLE `users` (
@@ -64,7 +97,7 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `users`
+-- Dumping data untuk tabel `users`
 --
 
 INSERT INTO `users` (`id`, `nama`, `email`, `password`, `foto`, `role_id`, `is_active`, `created_at`, `updated_at`) VALUES
@@ -75,7 +108,7 @@ INSERT INTO `users` (`id`, `nama`, `email`, `password`, `foto`, `role_id`, `is_a
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user_role`
+-- Struktur dari tabel `user_role`
 --
 
 CREATE TABLE `user_role` (
@@ -84,7 +117,7 @@ CREATE TABLE `user_role` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `user_role`
+-- Dumping data untuk tabel `user_role`
 --
 
 INSERT INTO `user_role` (`id`, `role`) VALUES
@@ -96,41 +129,65 @@ INSERT INTO `user_role` (`id`, `role`) VALUES
 --
 
 --
--- Indexes for table `migrations`
+-- Indeks untuk tabel `formulir`
+--
+ALTER TABLE `formulir`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `migrations`
 --
 ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `users`
+-- Indeks untuk tabel `portfolio`
+--
+ALTER TABLE `portfolio`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `user_role`
+-- Indeks untuk tabel `user_role`
 --
 ALTER TABLE `user_role`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `migrations`
+-- AUTO_INCREMENT untuk tabel `formulir`
+--
+ALTER TABLE `formulir`
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT untuk tabel `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT untuk tabel `portfolio`
+--
+ALTER TABLE `portfolio`
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT untuk tabel `users`
 --
 ALTER TABLE `users`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `user_role`
+-- AUTO_INCREMENT untuk tabel `user_role`
 --
 ALTER TABLE `user_role`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
