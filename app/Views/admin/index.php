@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-<!-- Coding by CodingLab | www.codinglabweb.com -->
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,17 +10,13 @@
 
     <!----===== Boxicons CSS ===== -->
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-
-    <!--<title>Dashboard Sidebar Menu</title>-->
+    <title><?= $title ?></title>
 </head>
 
 <body>
     <nav class="sidebar close">
         <header>
             <div class="image-text">
-                <span class="image">
-                    <!--<img src="logo.png" alt="">-->
-                </span>
                 <div class="text logo-text">
                     <span class="name">SatSet Website</span>
                 </div>

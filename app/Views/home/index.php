@@ -228,21 +228,22 @@
         </div>
         <div>
             <form action="<?= base_url('Home/form') ?>" class="container-sm" method="post">
+                <?= csrf_Field() ?>
                 <div class="mt-1 sm">
                     <label for="inputNama" class="form-label">Nama</label>
-                    <input type="text" class="form-control" id="inputName" placeholder="Masukkan Nama">
+                    <input type="text" class="form-control" id="inputNama" placeholder="Masukkan Nama" name="inputNama">
                 </div>
                 <div class="mt-3 sm">
                     <label for="inputEmail" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="inputEmail" placeholder="Masukkan Email">
+                    <input type="email" class="form-control" id="inputEmail" placeholder="Masukkan Email" name="inputEmail">
                 </div>
                 <div class="mt-3 sm">
-                    <label for="inputAddress" class="form-label">Nomor WA</label>
-                    <input type="text" class="form-control" id="inputAddress" placeholder="Masukkan Alamat">
+                    <label for="inputWA" class="form-label">Nomor WA</label>
+                    <input type="text" class="form-control" id="inputWA" placeholder="Masukkan Alamat" name="inputWA">
                 </div>
                 <div class="mt-3 sm">
                     <label for="inputPaket" class="form-label">Paket</label>
-                    <select id="inputPaket" class="form-select">
+                    <select id="inputPaket" class="form-select" name="inputPaket">
                         <option setActive>Blog Pribadi</option>
                         <option>Website Perusahaan</option>
                         <option>Toko Online</option>

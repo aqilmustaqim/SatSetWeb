@@ -18,7 +18,7 @@ class Home extends BaseController
         return view('dashboard/index');
     }
 
-    // public function saveform(){
+    public function form(){
         
-    // }
+    }
 }

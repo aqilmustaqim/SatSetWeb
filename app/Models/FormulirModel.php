@@ -6,7 +6,7 @@ use CodeIgniter\Model;
 
 class FormulirModel extends Model
 {
-    protected $table      = 'email';
+    protected $table      = 'formulir';
     protected $useTimestamps = true;
-    protected $allowedFields = ['email', 'nama', 'nomor_wa', 'jenis_paket'];
+    protected $allowedFields = ['nama', 'email', 'nomor_wa', 'jenis_paket'];
 }
