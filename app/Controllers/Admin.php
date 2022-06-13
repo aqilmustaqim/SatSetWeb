@@ -29,4 +29,7 @@ class Admin extends BaseController
 
         return view('admin/index', $data);
     }
+    public function setting(){
+        return redirect()->to(base_url('admin/setting'));
+    }
 }
