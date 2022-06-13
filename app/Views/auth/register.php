@@ -5,11 +5,9 @@
         <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-12 col-md-8 col-lg-6 col-xl-5">
                 <div class="card shadow-2-strong" style="border-radius: 1rem;">
-                    <div class="card-body p-5">
+                    <div class="card-body">
                         <h3 class=" text-center">Sign Up</h3>
-
                         <h6 class="mb-5 text-center">Sudah ada akun ? <a href="<?= base_url('login'); ?>">Login</a></h6>
-
                         <form method="post" action="<?= base_url('auth/registerSave'); ?>">
                             <div class="form-outline mb-4">
                                 <label class="form-label" for="typeEmailX-2">Nama Lengkap</label>

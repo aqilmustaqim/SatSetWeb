@@ -1,7 +1,5 @@
 <?php
-
 namespace App\Controllers;
-
 class Home extends BaseController
 {
     public function index()
@@ -18,5 +16,9 @@ class Home extends BaseController
     }
     public function dashboard(){
         return view('dashboard/index');
+    }
+
+    public function form(){
+        
     }
 }
