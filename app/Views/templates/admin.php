@@ -28,51 +28,47 @@
 
         <div class="menu-bar">
             <div class="menu">
-                <ul class="menu-links">
-                    <li class="nav-link">
-                        <a href=".home">
+                    <li class="">
+                        <a href="admin/dashboard">
                             <i class='bx bx-home-alt icon'></i>
                             <span class="text nav-text">Dashboard</span>
                         </a>
                     </li>
-                    <li class="nav-link">
-                        <a href="#">
+                    <li class="">
+                        <a href="admin/kelport">
                             <i class='bx bx-bar-chart-alt-2 icon'></i>
                             <span class="text nav-text">Kelola Portfolio</span>
                         </a>
                     </li>
-                    <li class="nav-link">
+                    <li class="admin/kelpaket">
                         <a href="#">
                             <i class='bx bx-bell icon'></i>
                             <span class="text nav-text">Kelola Paket</span>
                         </a>
                     </li>
-                    <li class="nav-link">
+                    <li class="">
                         <a href="#">
                             <i class='bx bx-bar-chart-alt-2 icon'></i>
                             <span class="text nav-text">Kelola Formulir</span>
                         </a>
                     </li>
-                    <li class="nav-link">
+                    <li class="">
                         <a href="#">
                             <i class='bx bx-bar-chart-alt-2 icon'></i>
                             <span class="text nav-text">Kelola Ulasan</span>
                         </a>
                     </li>
-                </ul>
             </div>
 
             <div class="bottom-content">
-
-            <li class="">
+                <li class="">
                     <a href="admin/profile">
                         <i class='bx bx-cog icon'></i>
                         <span class="text nav-text">Profile</span>
                     </a>
                 </li>
-
                 <li class="">
-                    <a href="#">
+                    <a href="auth/logout">
                         <i class='bx bx-log-out icon'></i>
                         <span class="text nav-text">Logout</span>
                     </a>
