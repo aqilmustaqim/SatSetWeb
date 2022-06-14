@@ -30,6 +30,10 @@ class Admin extends BaseController
         return view('admin/index', $data);
     }
     public function profile(){
-        return view('admin/profile');
+        $title = [
+            'title' => "SatSetWeb || Profile"
+        ];
+
+        return view('admin/profile', $title);
     }
 }
