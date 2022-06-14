@@ -283,7 +283,6 @@ body.dark .switch::before{
 .home{
     position: absolute;
     top: 0;
-    top: 0;
     left: 250px;
     height: 100vh;
     width: calc(100% - 250px);
@@ -303,6 +302,32 @@ body.dark .switch::before{
     width: calc(100% - 78px);
 }
 body.dark .home .text{
+    color: var(--text-color);
+}
+
+
+.profile{
+    position: absolute;
+    top: 0;
+    left: 250px;
+    height: 100vh;
+    width: calc(100% - 250px);
+    background-color: var(--body-color);
+    transition: var(--tran-05);
+}
+.profile *{
+    font-size: 30px;
+    font-weight: 500;
+    color: var(--text-color);
+    padding: 12px 60px;
+}
+
+.sidebar.close ~ .profile{
+    left: 78px;
+    height: 100vh;
+    width: calc(100% - 78px);
+}
+body.dark .profile *{
     color: var(--text-color);
 }
 

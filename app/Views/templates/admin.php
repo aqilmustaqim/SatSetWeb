@@ -65,9 +65,9 @@
             <div class="bottom-content">
 
             <li class="">
-                    <a href="<?= base_url('admin/setting'); ?>">
+                    <a href="admin/profile">
                         <i class='bx bx-cog icon'></i>
-                        <span class="text nav-text">Setting</span>
+                        <span class="text nav-text">Profile</span>
                     </a>
                 </li>
 
