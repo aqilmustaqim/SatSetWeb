@@ -13,7 +13,6 @@ class Auth extends BaseController
         $this->usersModel = new UsersModel();
     }
 
-
     public function login()
     {
         if (session()->get('logged_in')) {

@@ -28,38 +28,37 @@
 
         <div class="menu-bar">
             <div class="menu">
-                    <li class="">
-                        <a href="admin/dashboard">
-                            <i class='bx bx-home-alt icon'></i>
-                            <span class="text nav-text">Dashboard</span>
+                <li class="">
+                    <a href=<?php base_url('admin/index'); ?>>
+                        <i class='bx bx-home-alt icon'></i>
+                        <span class="text nav-text">Dashboard</span>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="porto">
+                        <i class='bx bx-bar-chart-alt-2 icon'></i>
+                        <span class="text nav-text">Kelola Portfolio</span>
                         </a>
-                    </li>
-                    <li class="">
-                        <a href="admin/kelport">
-                            <i class='bx bx-bar-chart-alt-2 icon'></i>
-                            <span class="text nav-text">Kelola Portfolio</span>
-                        </a>
-                    </li>
-                    <li class="admin/kelpaket">
-                        <a href="#">
-                            <i class='bx bx-bell icon'></i>
-                            <span class="text nav-text">Kelola Paket</span>
-                        </a>
-                    </li>
-                    <li class="">
-                        <a href="#">
-                            <i class='bx bx-bar-chart-alt-2 icon'></i>
-                            <span class="text nav-text">Kelola Formulir</span>
-                        </a>
-                    </li>
-                    <li class="">
-                        <a href="#">
-                            <i class='bx bx-bar-chart-alt-2 icon'></i>
-                            <span class="text nav-text">Kelola Ulasan</span>
-                        </a>
-                    </li>
+                </li>
+                <li class="">
+                    <a href="paket">
+                        <i class='bx bx-bell icon'></i>
+                        <span class="text nav-text">Kelola Paket</span>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="form">
+                        <i class='bx bx-bar-chart-alt-2 icon'></i>
+                        <span class="text nav-text">Kelola Formulir</span>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="ulasan">
+                        <i class='bx bx-bar-chart-alt-2 icon'></i>
+                        <span class="text nav-text">Kelola Ulasan</span>
+                    </a>
+                </li>
             </div>
-
             <div class="bottom-content">
                 <li class="">
                     <a href="admin/profile">
@@ -67,8 +66,8 @@
                         <span class="text nav-text">Profile</span>
                     </a>
                 </li>
-                <li class="">
-                    <a href="auth/logout">
+                <li class="#">
+                    <a href="#">
                         <i class='bx bx-log-out icon'></i>
                         <span class="text nav-text">Logout</span>
                     </a>
