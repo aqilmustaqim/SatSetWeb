@@ -29,23 +29,33 @@
             <div class="menu">
                 <ul class="menu-links">
                     <li class="nav-link">
-                        <a href="#">
+                        <a href=".home">
                             <i class='bx bx-home-alt icon'></i>
                             <span class="text nav-text">Dashboard</span>
                         </a>
                     </li>
-
                     <li class="nav-link">
                         <a href="#">
                             <i class='bx bx-bar-chart-alt-2 icon'></i>
                             <span class="text nav-text">Kelola Portfolio</span>
                         </a>
                     </li>
-
                     <li class="nav-link">
                         <a href="#">
                             <i class='bx bx-bell icon'></i>
                             <span class="text nav-text">Kelola Daftar Paket</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-bar-chart-alt-2 icon'></i>
+                            <span class="text nav-text">Kelola Formulir</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-bar-chart-alt-2 icon'></i>
+                            <span class="text nav-text">Kelola Ulasan</span>
                         </a>
                     </li>
                 </ul>
@@ -58,7 +68,6 @@
                         <span class="text nav-text">Logout</span>
                     </a>
                 </li>
-
                 <li class="mode">
                     <div class="sun-moon">
                         <i class='bx bx-moon icon moon'></i>
@@ -70,16 +79,13 @@
                         <span class="switch"></span>
                     </div>
                 </li>
-
             </div>
         </div>
-
     </nav>
-
     <section class="home">
         <div class="text">SatSet Dashboard</div>
     </section>
-
+    
     <script>
         const body = document.querySelector('body'),
             sidebar = body.querySelector('nav'),
@@ -99,5 +105,4 @@
         });
     </script>
 </body>
-
 </html>
