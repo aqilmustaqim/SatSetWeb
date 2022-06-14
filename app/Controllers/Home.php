@@ -10,15 +10,4 @@ class Home extends BaseController
 
         return view('home/index', $data);
     }
-
-    public function ta(){
-        return view('portfolio/index');
-    }
-    public function dashboard(){
-        return view('dashboard/index');
-    }
-
-    public function form(){
-        
-    }
 }
