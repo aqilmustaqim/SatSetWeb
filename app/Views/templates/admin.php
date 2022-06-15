@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Favicons -->
+    <link href="<?= base_url(); ?>/assets/img/Icon/icons8-lightning-bolt-color-glass-16.png" rel="icon">
+    
     <!----======== CSS ======== -->
     <link rel="stylesheet" href="<?= base_url() ?>/assets/css/styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -36,25 +39,25 @@
                 </li>
                 <li class="">
                     <a href="<?= base_url('Home/porto'); ?>">
-                        <i class='bx bx-bar-chart-alt-2 icon'></i>
+                        <i class='bx bx-receipt icon'></i>                        
                         <span class="text nav-text">Kelola Portfolio</span>
                         </a>
                 </li>
                 <li class="">
                     <a href="<?= base_url('Home/kelolapaket'); ?>">
-                        <i class='bx bx-bell icon'></i>
+                        <i class='bx bx-notepad icon'></i>
                         <span class="text nav-text">Kelola Paket</span>
                     </a>
                 </li>
                 <li class="">
-                    <a href="form">
+                    <a href="<?= base_url('Home/kelolaform'); ?>">
                         <i class='bx bx-bar-chart-alt-2 icon'></i>
                         <span class="text nav-text">Kelola Formulir</span>
                     </a>
                 </li>
                 <li class="">
-                    <a href="ulasan">
-                        <i class='bx bx-bar-chart-alt-2 icon'></i>
+                    <a href="<?= base_url('Home/kelolaUlasan'); ?>">
+                        <i class='bx bx-message-alt-minus icon'></i>
                         <span class="text nav-text">Kelola Ulasan</span>
                     </a>
                 </li>

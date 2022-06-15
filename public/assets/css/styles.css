@@ -296,12 +296,17 @@ body.dark .home .text{
     transition: var(--tran-05);
 }
 .sidebar.close ~ .profile{
-    left: 78px;
+    left: 90px;
     height: 100vh;
     width: calc(100% - 70px);
 }
 body.dark .profile *{
     color: var(--text-color);
+}
+
+.rounded-circle{
+    width: 80dp;
+    height: 80dp;
 }
 
 /**
