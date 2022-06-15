@@ -29,4 +29,14 @@ class Admin extends BaseController
 
         return view('admin/index', $data);
     }
+
+    public function cek()
+    {
+        if (!session()->get('logged_in')) {
+            return redirect()->to(base_url('login'));
+        }elseif (condition) {
+            session()->setFlashdata('sukses', 'Hehehehehhehehehehehheheheh');
+            return redirect()->to(base_url('#Form'));
+        }
+    }
 }

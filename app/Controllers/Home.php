@@ -30,7 +30,6 @@ class Home extends BaseController{
     public function porto(){
         $title = [ 
             'title' => "SatSetWeb || Portofolio",
-            'porto' => portofolioModel->get()
         ];
 
         echo view('admin/kelola_portfolio', $title);   
