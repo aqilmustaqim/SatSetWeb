@@ -6,7 +6,7 @@
           <div class="card">
             <div class="card-body profile-card pt-5 d-flex flex-column align-items-center">
               <img src="" alt="Profile" class="rounded-circle">
-              <h2>Fajar Indrawan</h2>
+              <h2><?= $nama ?></h2>
               <h3>Admin</h3>
             </div>
           </div>

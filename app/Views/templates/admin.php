@@ -41,7 +41,7 @@
                         </a>
                 </li>
                 <li class="">
-                    <a href="paket">
+                    <a href="<?= base_url('Home/kelolapaket'); ?>">
                         <i class='bx bx-bell icon'></i>
                         <span class="text nav-text">Kelola Paket</span>
                     </a>
@@ -61,13 +61,13 @@
             </div>
             <div class="bottom-content">
                 <li class="">
-                    <a href="admin/profile">
+                    <a href="<?= base_url('Home/profile'); ?>">
                         <i class='bx bx-cog icon'></i>
                         <span class="text nav-text">Profile</span>
                     </a>
                 </li>
                 <li class="#">
-                    <a href="#">
+                    <a href="<?= base_url('Home/logout'); ?>">
                         <i class='bx bx-log-out icon'></i>
                         <span class="text nav-text">Logout</span>
                     </a>

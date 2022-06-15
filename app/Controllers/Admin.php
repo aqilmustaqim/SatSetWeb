@@ -29,30 +29,4 @@ class Admin extends BaseController
 
         return view('admin/index', $data);
     }
-    public function profile(){
-        $title = [
-            'title' => "SatSetWeb || Profile"
-        ];
-
-        return view('admin/profile', $title);
-    }
-
-    public function porto(){
-        $title = [ 
-            'title' => "SatSetWeb || Portofolio"
-        ];
-
-        return view('admin/kelola_portfolio', $title);   
-    }
-
-    public function logout(){
-        $dataSession = [
-            'nama',
-            'email',
-            'role_id',
-            'logged_in'
-        ];
-        session()->remove($dataSession);
-        return redirect()->to(base_url());
-    }
 }
