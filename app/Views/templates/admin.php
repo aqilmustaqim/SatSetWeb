@@ -29,13 +29,13 @@
         <div class="menu-bar">
             <div class="menu">
                 <li class="">
-                    <a href=<?php base_url('admin/index'); ?>>
+                    <a href="<?= base_url('admin/index'); ?>">
                         <i class='bx bx-home-alt icon'></i>
                         <span class="text nav-text">Dashboard</span>
                     </a>
                 </li>
                 <li class="">
-                    <a href="porto">
+                    <a href="<?= base_url('Home/porto'); ?>">
                         <i class='bx bx-bar-chart-alt-2 icon'></i>
                         <span class="text nav-text">Kelola Portfolio</span>
                         </a>

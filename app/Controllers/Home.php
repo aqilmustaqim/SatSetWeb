@@ -8,7 +8,7 @@ class Home extends BaseController
             'title' => 'SatSetWeb || Home'
         ];
 
-        return view('home/index', $data);
+        echo view('home/index', $data);
     }
 
     public function profile(){
@@ -24,7 +24,7 @@ class Home extends BaseController
             'title' => "SatSetWeb || Portofolio"
         ];
 
-        return view('admin/kelola_portfolio', $title);   
+        echo view('admin/kelola_portfolio', $title);   
     }
 
     public function logout(){
