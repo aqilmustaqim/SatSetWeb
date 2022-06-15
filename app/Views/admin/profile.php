@@ -2,19 +2,12 @@
 <?= $this->section('content'); ?>
 <section class="profile">
     <div class="row">
-        <div class="col-xl-4">
-          <div class="card">
             <div class="card-body profile-card pt-5 d-flex flex-column align-items-center">
               <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80" style="width: 130px; height: 130px;" alt="Profile" class="rounded-circle">
               <h2><?= $nama ?></h2>
               <h3>Admin</h3>
-            </div>
-          </div>
         </div>
 
-        <div class="col-xl-8">
-          <div class="card">
-            <div class="card-body pt-3 d-flex flex-column">
               <!-- Bordered Tabs -->
               <ul class="nav nav-tabs nav-tabs-bordered">
 
