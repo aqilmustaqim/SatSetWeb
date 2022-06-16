@@ -59,6 +59,10 @@ body.dark{
     width: 90px;
 }
 
+.tab-content{
+    width: 100%;
+    margin-left: 100px;
+}
 /* ===== Reusable code - Here ===== */
 .sidebar li{
     height: 50px;
@@ -290,7 +294,6 @@ body.dark .home .text{
     position: absolute;
     top: 0;
     left: 250px;
-    height: 100vh;
     width: calc(100% - 250px);
     background-color: var(--body-color);
     transition: var(--tran-05);

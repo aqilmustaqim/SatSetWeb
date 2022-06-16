@@ -50,8 +50,8 @@
                       <div class="col-md-8 col-lg-9">
                         <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80" style="width: 150px; height: 150px;" alt="Profile">
                         <div class="pt-2">
-                          <a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-upload"></i></a>
-                          <a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a>
+                          <a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class='bx bx-upload'></i></a>
+                          <a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class='bx bx-trash'></i></a>
                         </div>
                       </div>
                     </div>
