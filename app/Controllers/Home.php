@@ -3,12 +3,12 @@
 namespace App\Controllers;
 
 class Home extends BaseController{
-    // protected portofolioModel;
+    protected portfolioModel;
 
-    // public function __construct()
-    // {
-    //     $this->portofolioModel = new portofolioModel();
-    // }
+    public function __construct()
+    {
+        $this->PortfolioModel = new PortfolioModel();
+    }
 
     public function index(){
         $data = [
@@ -29,10 +29,10 @@ class Home extends BaseController{
     public function porto(){
         $title = [ 
             'title' => "SatSetWeb || Portofolio",
-            'nama' => session()->get('nama')
-            'deskripsi' => session()->get('deskripsi')
-            'jenis' => session()->get('jenis')
-            'gambar' => session()->get('gambar')
+            'nama' => session()->get('nama'),
+            'deskripsi' => session()->get('deskripsi'),
+            'jenis' => session()->get('jenis'),
+            'gambar' => session()->get('gambar'),
             'link' => session()->get('link')
         ];
 
