@@ -1,7 +1,15 @@
 <?php
+
 namespace App\Controllers;
-class Home extends BaseController
-{
+
+class Home extends BaseController{
+    protected portofolioModel;
+
+    public function __construct()
+    {
+        $this->portofolioModel = new portofolioModel();
+    }
+
     public function index()
     {
         $data = [
@@ -21,10 +29,34 @@ class Home extends BaseController
 
     public function porto(){
         $title = [ 
-            'title' => "SatSetWeb || Portofolio"
+            'title' => "SatSetWeb || Portofolio",
         ];
 
         echo view('admin/kelola_portfolio', $title);   
+    }
+
+    public function kelolapaket()
+    {
+        $data = [
+            'title' => 'SatSetWeb || kelola Paket'
+        ];
+        echo view('admin/kelola_paket', $data);
+    }
+
+    public function kelolaform()
+    {
+        $data = [
+            'title' => 'SatSetWeb || kelola Form'
+        ];
+        echo view('admin/kelola_formulir', $data);
+    }
+
+    public function kelolaUlasan()
+    {
+        $data = [
+            'title' => 'SatSetWeb || kelola Ulasan'
+        ];
+        echo view('admin/kelola_ulasan', $data);
     }
 
     public function logout(){
@@ -36,14 +68,5 @@ class Home extends BaseController
         ];
         session()->remove($dataSession);
         return redirect()->to(base_url());
-    }
-
-    public function kelolapaket()
-    {
-        $data = [
-            'title' => 'SatSetWeb || kelola Paket'
-        ];
-
-        echo view('admin/kelola_paket', $data);
     }
 }

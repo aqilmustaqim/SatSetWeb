@@ -222,12 +222,20 @@
 <!-- ======= Form Section ======= -->
 <section id="Form">
     <div class="justify-content-center">
+        <?php if (session()->getFlashData('sukses')) : ?>
+            <div class="alert alert-success solid alert-dismissible fade show">
+                <strong>Berhasil !</strong> <?= session()->getFlashdata('sukses'); ?>
+                <button type="button" class="close h-100" data-dismiss="alert" aria-label="Close">
+                    <span><i class="mdi mdi-close"></i></span>
+                </button>
+            </div>
+        <?php endif; ?>
         <div class="section-title">
             <h2>Form</h2>
             <h1 class="mt-2">Formulir</h1>
         </div>
         <div>
-            <form action="<?= base_url('Home/form') ?>" class="container-sm" method="post">
+            <form action="<?= base_url('Admin/cek') ?>" class="container-sm" method="post">
                 <?= csrf_Field() ?>
                 <div class="mt-1 sm">
                     <label for="inputNama" class="form-label">Nama</label>
