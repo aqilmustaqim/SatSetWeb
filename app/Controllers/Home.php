@@ -3,7 +3,8 @@
 namespace App\Controllers;
 
 class Home extends BaseController{
-    protected portfolioModel;
+    
+    protected portfolioModel;    
 
     public function __construct()
     {
