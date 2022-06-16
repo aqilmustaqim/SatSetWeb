@@ -223,10 +223,10 @@
 <section id="Form">
     <div class="justify-content-center">
         <?php if (session()->getFlashData('sukses')) : ?>
-            <div class="alert alert-success solid alert-dismissible fade show">
-                <strong>Berhasil !</strong> <?= session()->getFlashdata('sukses'); ?>
-                <button type="button" class="close h-100" data-dismiss="alert" aria-label="Close">
-                    <span><i class="mdi mdi-close"></i></span>
+            <div class="alert alert-success solid alert-dismissible fade show" style="text-align: center;">
+                <strong>Berhasil ! <?= session()->getFlashdata('sukses'); ?></strong>
+                <button type="button" data-dismiss="alert" aria-label="Close">
+                    <i class="bi bi-x-square"></i>
                 </button>
             </div>
         <?php endif; ?>

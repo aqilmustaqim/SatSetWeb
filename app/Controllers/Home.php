@@ -2,13 +2,13 @@
 
 namespace App\Controllers;
 
-class Home extends BaseController{
-    
-    protected portfolioModel;    
+use App\Models\PortfolioModel;
 
-    public function __construct()
-    {
-        $this->PortfolioModel = new PortfolioModel();
+class Home extends BaseController{
+    protected $PortModel;
+
+    public function __construct(){
+        $this->PortModel = new PortfolioModel();
     }
 
     public function index(){
@@ -36,28 +36,24 @@ class Home extends BaseController{
             'gambar' => session()->get('gambar'),
             'link' => session()->get('link')
         ];
-
         echo view('admin/kelola_portfolio', $title);   
     }
 
-    public function kelolapaket()
-    {
+    public function kelolapaket(){
         $data = [
             'title' => 'SatSetWeb || kelola Paket'
         ];
         echo view('admin/kelola_paket', $data);
     }
 
-    public function kelolaform()
-    {
+    public function kelolaform(){
         $data = [
             'title' => 'SatSetWeb || kelola Form'
         ];
         echo view('admin/kelola_formulir', $data);
     }
 
-    public function kelolaUlasan()
-    {
+    public function kelolaUlasan(){
         $data = [
             'title' => 'SatSetWeb || kelola Ulasan'
         ];
