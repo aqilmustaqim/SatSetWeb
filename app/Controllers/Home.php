@@ -28,8 +28,6 @@ class Home extends BaseController{
     }
 
     public function porto(){
-        $postModel = new PostModel();
-
         $title = [ 
             'title' => "SatSetWeb || Portofolio",
             'nama' => session()->get('nama'),
