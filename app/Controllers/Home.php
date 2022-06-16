@@ -29,6 +29,11 @@ class Home extends BaseController{
     public function porto(){
         $title = [ 
             'title' => "SatSetWeb || Portofolio",
+            'nama' => session()->get('nama')
+            'deskripsi' => session()->get('deskripsi')
+            'jenis' => session()->get('jenis')
+            'gambar' => session()->get('gambar')
+            'link' => session()->get('link')
         ];
 
         echo view('admin/kelola_portfolio', $title);   
