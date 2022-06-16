@@ -1,14 +1,14 @@
 <?= $this->extend('templates/admin'); ?>
 <?= $this->section('content'); ?>
-<section class="profile">
-    <div class="row">
+<section>
+    <div>
         <div class="card-body profile-card pt-2 d-flex flex-column align-items-center">
             <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80" alt="Profile" style="width: 250px;" class="rounded-circle">
             <h2><?= $nama ?></h2>
             <h3>Admin</h3>
         </div>
   <!-- Bordered Tabs -->
-        <ul class="nav nav-tabs nav-tabs-bordered justify-content-center">
+        <ul class="nav nav-tabs justify-content-center">
           <li class="nav-item">
             <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-edit">Edit Profile</button>
           </li>
@@ -18,28 +18,28 @@
         </ul>
         <div class="tab-content">
           <div class="tab-pane fade show active profile-overview" id="profile-overview">
-            <h5 class="card-title text-center">About</h5>
+            <h5 class="text-center">About</h5>
               <p class="small fst-italic"></p>
-                <h5 class="card-title">Profile Details</h5>
+                <h5>Profile Details</h5>
                   <div class="row">
-                    <div class="col-lg-3 col-md-4 label ">Full Name</div>
-                    <div class="col-lg-9 col-md-8">Moh Ersal Aldo Alvinetino</div>
+                    <div class="col-lg-6">Full Name</div>
+                    <div class="col-lg-6">Moh Ersal Aldo Alvinetino</div>
                   </div>
                   <div class="row">
-                    <div class="col-lg-3 col-md-4 label">Company</div>
-                    <div class="col-lg-9 col-md-8">SatSet Corporation</div>
+                    <div class="col-lg-6">Company</div>
+                    <div class="col-lg-6">SatSet Corporation</div>
                   </div>
                   <div class="row">
-                    <div class="col-lg-3 col-md-4 label">Job</div>
-                    <div class="col-lg-9 col-md-8">Web Designer</div>
+                    <div class="col-lg-6">Job</div>
+                    <div class="col-lg-6">Web Designer</div>
                   </div>
                   <div class="row">
-                    <div class="col-lg-3 col-md-4 label">Phone</div>
-                    <div class="col-lg-9 col-md-8">14022</div>
+                    <div class="col-lg-6">Phone</div>
+                    <div class="col-lg-6">14022</div>
                   </div>
                   <div class="row">
-                    <div class="col-lg-3 col-md-4 label">Email</div>
-                    <div class="col-lg-9 col-md-8">alvin@gmail.com</div>
+                    <div class="col-lg-6">Email</div>
+                    <div class="col-lg-6">alvin@gmail.com</div>
                   </div>
                 </div>
                 <div class="tab-pane fade profile-edit pt-3" id="profile-edit">

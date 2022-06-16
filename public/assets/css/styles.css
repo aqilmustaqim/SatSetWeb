@@ -24,7 +24,6 @@
 }
 
 body{
-    min-height: 100%;
     background-color: var(--body-color);
     transition: var(--tran-05);
 }
@@ -60,8 +59,9 @@ body.dark{
 }
 
 .tab-content{
-    width: 100%;
-    margin-left: 100px;
+    align-items: center;
+    align-content: center;
+    text-align: center;
 }
 /* ===== Reusable code - Here ===== */
 .sidebar li{
@@ -291,7 +291,7 @@ body.dark .home .text{
 
 
 .profile{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 250px;
     width: calc(100% - 250px);
@@ -300,7 +300,7 @@ body.dark .home .text{
 }
 .sidebar.close ~ .profile{
     left: 90px;
-    height: 100vh;
+    height: 100%;
     width: calc(100% - 70px);
 }
 body.dark .profile *{
