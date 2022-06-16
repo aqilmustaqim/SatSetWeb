@@ -3,7 +3,6 @@
 namespace App\Controllers;
 
 class Home extends BaseController{
-    protected portofolioModel;
 
     public function __construct()
     {
