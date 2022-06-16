@@ -3,15 +3,14 @@
 namespace App\Controllers;
 
 class Home extends BaseController{
-    protected portofolioModel;
+    // protected portofolioModel;
 
-    public function __construct()
-    {
-        $this->portofolioModel = new portofolioModel();
-    }
+    // public function __construct()
+    // {
+    //     $this->portofolioModel = new portofolioModel();
+    // }
 
-    public function index()
-    {
+    public function index(){
         $data = [
             'title' => 'SatSetWeb || Home'
         ];
@@ -57,6 +56,15 @@ class Home extends BaseController{
             'title' => 'SatSetWeb || kelola Ulasan'
         ];
         echo view('admin/kelola_ulasan', $data);
+    }
+
+    public function cek(){
+        if (!session()->get('logged_in')) {
+            return redirect()->to(base_url('login'));
+        }else{
+            session()->setFlashdata('sukses', 'Hehehehehhehehehehehheheheh');
+            return redirect()->to(base_url('#Form'));
+        }
     }
 
     public function logout(){

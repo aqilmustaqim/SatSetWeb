@@ -235,7 +235,7 @@
             <h1 class="mt-2">Formulir</h1>
         </div>
         <div>
-            <form action="<?= base_url('Admin/cek') ?>" class="container-sm" method="post">
+            <form action="<?= base_url('Home/cek') ?>" class="container-sm" method="post">
                 <?= csrf_Field() ?>
                 <div class="mt-1 sm">
                     <label for="inputNama" class="form-label">Nama</label>
