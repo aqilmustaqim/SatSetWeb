@@ -7,7 +7,7 @@ class Home extends BaseController{
 
     public function __construct()
     {
-        $this->portofolioModel = new portofolioModel();
+        $this->PortofolioModel = new PortofolioModel();
     }
 
     public function index()
