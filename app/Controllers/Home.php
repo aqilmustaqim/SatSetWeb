@@ -28,11 +28,7 @@ class Home extends BaseController{
     }
 
     public function porto(){
-<<<<<<< HEAD
-        $PortfolioModel = new PortfolioModel();
 
-=======
->>>>>>> 9e6b6538649395a9e8152c467ef7d9d0e0c585de
         $title = [ 
             'title' => "SatSetWeb || Portofolio",
             'nama' => session()->get('nama'),
