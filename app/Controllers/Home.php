@@ -22,7 +22,7 @@ class Home extends BaseController{
     }
 
     public function porto(){
-        $postModel = new PostModel();
+        $PortfolioModel = new PortfolioModel();
 
         $title = [ 
             'title' => "SatSetWeb || Portofolio",

@@ -15,41 +15,23 @@
             <th scope="col">No</th>
             <th scope="col">Nama Web</th>
             <th scope="col">Jenis Web</th>
-            <th scope="col">Publish</th>
+            <th scope="col">Link Web</th>
             <th scope="col">Status</th>
             </tr>
         </thead>
         <tbody>
+        <?php foreach($portfolio as $key => $portfolio) : ?>
             <tr>
-            <th scope="row">1</th>
-            <td>App Bakery</td>
-            <td>Sistem Informasi Web</td>
-            <td>Bebas Tim</td>
-            <td>
-            <button type="button" class="btn btn-warning">Edit</button>
-            <button type="button" class="btn btn-danger">Delete</button>
-            </td>
+                <td scope="col"><?= ++$key ?></td>
+                <td scope="col"><?= $portfolio['nama'] ?></td>
+                <td scope="col"><?= $portfolio['jenis'] ?></td>
+                <td scope="col"><?= $portfolio['link'] ?></td>
+                <td scope="col" class="text-center">
+                    <a class="btn btn-sm btn-primary">EDIT</a>
+                    <a class="btn btn-sm btn-danger">HAPUS</a>
+                </td>
             </tr>
-            <tr>
-            <th scope="row">2</th>
-            <td>App Bakery</td>
-            <td>Sistem Informasi Web</td>
-            <td>Bebas Tim</td>
-            <td>
-            <button type="button" class="btn btn-warning">Edit</button>
-            <button type="button" class="btn btn-danger">Delete</button>
-            </td>
-            </tr>
-            <tr>
-            <th scope="row">3</th>
-            <td>App Bakery</td>
-            <td>Sistem Informasi Web</td>
-            <td>Bebas Tim</td>
-            <td>
-            <button type="button" class="btn btn-warning">Edit</button>
-            <button type="button" class="btn btn-danger">Delete</button>
-            </td>
-            </tr>
+        <?php endforeach ?>
         </tbody>
         </table>
     </div>
