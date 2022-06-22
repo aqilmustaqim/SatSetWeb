@@ -2,10 +2,16 @@
 
 namespace App\Controllers;
 
-class Home extends BaseController{
+use App\Models\PortfolioModel;
 
-    public function index()
-    {
+class Home extends BaseController{
+    protected $PortModel;
+
+    public function __construct(){
+        $this->PortModel = new PortfolioModel();
+    }
+
+    public function index(){
         $data = [
             'title' => 'SatSetWeb || Home'
         ];
@@ -22,8 +28,11 @@ class Home extends BaseController{
     }
 
     public function porto(){
+<<<<<<< HEAD
         $PortfolioModel = new PortfolioModel();
 
+=======
+>>>>>>> 9e6b6538649395a9e8152c467ef7d9d0e0c585de
         $title = [ 
             'title' => "SatSetWeb || Portofolio",
             'nama' => session()->get('nama'),
@@ -32,32 +41,37 @@ class Home extends BaseController{
             'gambar' => session()->get('gambar'),
             'link' => session()->get('link')
         ];
-
         echo view('admin/kelola_portfolio', $title);   
     }
 
-    public function kelolapaket()
-    {
+    public function kelolapaket(){
         $data = [
             'title' => 'SatSetWeb || kelola Paket'
         ];
         echo view('admin/kelola_paket', $data);
     }
 
-    public function kelolaform()
-    {
+    public function kelolaform(){
         $data = [
             'title' => 'SatSetWeb || kelola Form'
         ];
         echo view('admin/kelola_formulir', $data);
     }
 
-    public function kelolaUlasan()
-    {
+    public function kelolaUlasan(){
         $data = [
             'title' => 'SatSetWeb || kelola Ulasan'
         ];
         echo view('admin/kelola_ulasan', $data);
+    }
+
+    public function cek(){
+        if (!session()->get('logged_in')) {
+            return redirect()->to(base_url('login'));
+        }else{
+            session()->setFlashdata('sukses', 'Hehehehehhehehehehehheheheh');
+            return redirect()->to(base_url('#Form'));
+        }
     }
 
     public function logout(){

@@ -24,7 +24,6 @@
 }
 
 body{
-    min-height: 100%;
     background-color: var(--body-color);
     transition: var(--tran-05);
 }
@@ -59,6 +58,11 @@ body.dark{
     width: 90px;
 }
 
+.tab-content{
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
 /* ===== Reusable code - Here ===== */
 .sidebar li{
     height: 50px;
@@ -287,17 +291,16 @@ body.dark .home .text{
 
 
 .profile{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 250px;
-    height: 100vh;
     width: calc(100% - 250px);
     background-color: var(--body-color);
     transition: var(--tran-05);
 }
 .sidebar.close ~ .profile{
     left: 90px;
-    height: 100vh;
+    height: 100%;
     width: calc(100% - 70px);
 }
 body.dark .profile *{
