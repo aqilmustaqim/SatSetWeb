@@ -1,6 +1,7 @@
 <?= $this->extend('templates/admin'); ?>
 <?= $this->section('content'); ?>
 <section>
+  
     <div>
         <div class="card-body profile-card pt-2 d-flex flex-column align-items-center">
             <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80" alt="Profile" style="width: 250px;" class="rounded-circle">
@@ -23,7 +24,7 @@
                 <h5>Profile Details</h5>
                   <div class="row">
                     <div class="col-lg-6">Full Name</div>
-                    <div class="col-lg-6">Moh Ersal Aldo Alvinetino</div>
+                    <div class="col-lg-6">Fajar Indrawan</div>
                   </div>
                   <div class="row">
                     <div class="col-lg-6">Company</div>
@@ -50,15 +51,15 @@
                       <div class="col-md-8 col-lg-9">
                         <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80" style="width: 150px; height: 150px;" alt="Profile">
                         <div class="pt-2">
-                          <a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class='bx bx-upload'></i></a>
-                          <a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class='bx bx-trash'></i></a>
+                          <button onclick="myFunction()" class="btn btn-primary btn-sm" title="Upload Foto"><i class='bx bx-upload'></i></button>
+                          <button onclick="myFunction()" class="btn btn-danger btn-sm" title="Hapus Foto"><i class='bx bx-trash'></i></button>
                         </div>
                       </div>
                     </div>
                     <div class="row mb-3">
                       <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Full Name</label>
                       <div class="col-md-8 col-lg-5">
-                        <input name="fullName" type="text" class="form-control" id="fullName" value="Moh Ersal Aldo Alvinetino">
+                        <input name="fullName" type="text" class="form-control" id="fullName" value="Fajar Indrawan">
                       </div>
                     </div>
                     <div class="row mb-3">
