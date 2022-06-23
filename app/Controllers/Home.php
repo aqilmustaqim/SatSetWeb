@@ -48,8 +48,11 @@ class Home extends BaseController{
 
     public function editporto(){
 
+        $data = $this->PortModel->findAll();
+
         $title = [ 
             'title' => "SatSetWeb || Portofolio",
+            'data' => $data
         ];
         echo view('admin/edit_portfolio', $title);   
     }

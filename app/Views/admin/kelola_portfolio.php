@@ -22,7 +22,6 @@
         <tbody>
         <?php $nomor = 1;?>
             <?php foreach($data as $d) :?>
-                        
             <tr>
                 <td scope="col"><?php echo $nomor++;?></td>
                 <td scope="col"><?php echo $d['nama'];?></td>
