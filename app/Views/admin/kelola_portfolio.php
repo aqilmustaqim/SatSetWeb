@@ -20,26 +20,20 @@
             </tr>
         </thead>
         <tbody>
+        <?php $nomor = 1;?>
+            <?php foreach($data as $d) :?>
+                        
             <tr>
-                <td scope="col">1</td>
-                <td scope="col">AppBakery</td>
-                <td scope="col">Web Perusahaan</td>
-                <td scope="col">www.AppBakery.com</td>
+                <td scope="col"><?php echo $nomor++;?></td>
+                <td scope="col"><?php echo $d['nama'];?></td>
+                <td scope="col"><?php echo $d['jenis'];?></td>
+                <td scope="col"><?php echo $d['link'];?></td>
                 <td scope="col" class="text-start">
                     <a class="btn btn-sm btn-primary" href="<?= base_url('Home/editporto'); ?>" role="button">EDIT</a>
                     <a class="btn btn-sm btn-danger" href="#" role="button">HAPUS</a>
                 </td>
             </tr>
-            <tr>
-                <td scope="col">2</td>
-                <td scope="col">AppSampah</td>
-                <td scope="col">Web Perusahaan</td>
-                <td scope="col">www.AppSampah.com</td>
-                <td scope="col" class="text-start">
-                    <a class="btn btn-sm btn-primary" href="<?= base_url('Home/editporto'); ?>" role="button">EDIT</a>
-                    <a class="btn btn-sm btn-danger" href="#" role="button">HAPUS</a>
-                </td>
-            </tr>
+            <?php endforeach; ?>
 
         
         </tbody>

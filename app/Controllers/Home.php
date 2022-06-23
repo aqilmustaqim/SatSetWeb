@@ -29,15 +29,13 @@ class Home extends BaseController{
 
     public function porto(){
 
+        $data = $this->PortModel->findAll();
+
         $title = [ 
             'title' => "SatSetWeb || Portofolio",
-            'nama' => session()->get('nama'),
-            'deskripsi' => session()->get('deskripsi'),
-            'jenis' => session()->get('jenis'),
-            'gambar' => session()->get('gambar'),
-            'link' => session()->get('link')
+            'data' => $data
         ];
-        echo view('admin/kelola_portfolio', $title);   
+        return view('admin/kelola_portfolio', $title);   
     }
 
     public function createporto(){
