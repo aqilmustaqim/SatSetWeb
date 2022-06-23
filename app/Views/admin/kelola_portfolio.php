@@ -9,7 +9,7 @@
     <h1 class="text py-3">Kelola Portfolio</h1>
     <div class="container">
         <table class="table">
-            <button type="button" class="btn btn-success mb-3">Create New Portfolio</button>
+            <a class="btn btn-success mb-3" href="<?= base_url('Home/createporto'); ?>" role="button">Create New Portfolio</a>
         <thead>
             <tr>
             <th scope="col">No</th>
@@ -26,8 +26,8 @@
                 <td scope="col">Web Perusahaan</td>
                 <td scope="col">www.AppBakery.com</td>
                 <td scope="col" class="text-start">
-                    <a class="btn btn-sm btn-primary">EDIT</a>
-                    <a class="btn btn-sm btn-danger">HAPUS</a>
+                    <a class="btn btn-sm btn-primary" href="<?= base_url('Home/editporto'); ?>" role="button">EDIT</a>
+                    <a class="btn btn-sm btn-danger" href="#" role="button">HAPUS</a>
                 </td>
             </tr>
             <tr>
@@ -36,8 +36,8 @@
                 <td scope="col">Web Perusahaan</td>
                 <td scope="col">www.AppSampah.com</td>
                 <td scope="col" class="text-start">
-                    <a class="btn btn-sm btn-primary">EDIT</a>
-                    <a class="btn btn-sm btn-danger">HAPUS</a>
+                    <a class="btn btn-sm btn-primary" href="<?= base_url('Home/editporto'); ?>" role="button">EDIT</a>
+                    <a class="btn btn-sm btn-danger" href="#" role="button">HAPUS</a>
                 </td>
             </tr>
 

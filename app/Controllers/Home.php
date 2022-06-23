@@ -40,6 +40,22 @@ class Home extends BaseController{
         echo view('admin/kelola_portfolio', $title);   
     }
 
+    public function createporto(){
+
+        $title = [ 
+            'title' => "SatSetWeb || Portofolio",
+        ];
+        echo view('admin/create_portfolio', $title);   
+    }
+
+    public function editporto(){
+
+        $title = [ 
+            'title' => "SatSetWeb || Portofolio",
+        ];
+        echo view('admin/edit_portfolio', $title);   
+    }
+
     public function kelolapaket(){
         $data = [
             'title' => 'SatSetWeb || kelola Paket'
