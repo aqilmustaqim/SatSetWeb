@@ -20,18 +20,28 @@
             </tr>
         </thead>
         <tbody>
-        <?php foreach($portfolio as $key => $portfolio) : ?>
             <tr>
-                <td scope="col"><?= ++$key ?></td>
-                <td scope="col"><?= $portfolio['nama'] ?></td>
-                <td scope="col"><?= $portfolio['jenis'] ?></td>
-                <td scope="col"><?= $portfolio['link'] ?></td>
-                <td scope="col" class="text-center">
+                <td scope="col">1</td>
+                <td scope="col">AppBakery</td>
+                <td scope="col">Web Perusahaan</td>
+                <td scope="col">www.AppBakery.com</td>
+                <td scope="col" class="text-start">
                     <a class="btn btn-sm btn-primary">EDIT</a>
                     <a class="btn btn-sm btn-danger">HAPUS</a>
                 </td>
             </tr>
-        <?php endforeach ?>
+            <tr>
+                <td scope="col">2</td>
+                <td scope="col">AppSampah</td>
+                <td scope="col">Web Perusahaan</td>
+                <td scope="col">www.AppSampah.com</td>
+                <td scope="col" class="text-start">
+                    <a class="btn btn-sm btn-primary">EDIT</a>
+                    <a class="btn btn-sm btn-danger">HAPUS</a>
+                </td>
+            </tr>
+
+        
         </tbody>
         </table>
     </div>
