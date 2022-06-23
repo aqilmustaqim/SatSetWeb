@@ -35,7 +35,7 @@
         <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Masukkan Link Website">
         </div>
 
-        <a class="btn btn-sm btn-primary" href="<?= base_url('Home/editporto'); ?>" role="button">Save</a>
+        <a class="btn btn-sm btn-primary" href="<?= base_url('Home/porto'); ?>" role="button">Save</a>
                     
     </div>
     </section>
