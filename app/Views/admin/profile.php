@@ -13,7 +13,7 @@
             <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-edit">Edit Profile</button>
           </li>
           <li class="nav-item">
-            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-change-password">Ubah Password</button>            
+            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-change-password">Ubah Password</button>
           </li>
         </ul>
         <div class="tab-content">
@@ -49,9 +49,9 @@
                       <label for="profileImage" class="col-md-4 col-lg-3 col-form-label">Profile Image</label>
                       <div class="col-md-8 col-lg-9">
                         <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80" style="width: 150px; height: 150px;" alt="Profile">
-                        <div class="pt-2">                         
-                          <button class="btn btn-primary btn-sm tombol-upload"><i class='bx bx-upload'></i></button>
-                          <button class="btn btn-danger btn-sm" ><i class='bx bx-trash'></i></button>
+                        <div class="pt-2">
+                          <button type="button" class="btn btn-primary btn-sm"><i class='bx bx-upload'></i></button>
+                          <button type="button" class="btn btn-danger btn-sm" ><i class='bx bx-trash'></i></button>
                         </div>
                       </div>
                     </div>
