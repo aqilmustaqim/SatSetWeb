@@ -7,12 +7,12 @@
 				<table class="table table-hover">
 		            <thead>
 		                <tr>
-		                    <th scope="col">No</th>
-		                    <th scope="col">Nama</th>
-		                    <th scope="col">Email</th>
-		                    <th scope="col">Nomor WA</th>
-		                    <th scope="col">Jenis Paket</th>
-		                    <th scope="col">Status Form</th>
+		                    <th scope="col" class="text">No</th>
+		                    <th scope="col" class="text">Nama</th>
+		                    <th scope="col" class="text">Email</th>
+		                    <th scope="col" class="text">Nomor WA</th>
+		                    <th scope="col" class="text">Jenis Paket</th>
+		                    <th scope="col" class="text">Status Form</th>
 		                </tr>
 		            </thead>
 		            <tbody>

@@ -1,7 +1,8 @@
 <?= $this->extend('templates/admin'); ?>
 <?= $this->section('content'); ?>
 <section class="home">
-   <div class="text">Dashboard
+   <h1 class="py-5 text-center">Dashboard</h1>
+   <div class="text">
       <div class="container">
          <div class="row">
             <!-- Jumlah User -->  
