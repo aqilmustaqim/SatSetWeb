@@ -1,9 +1,6 @@
 <?= $this->extend('templates/admin'); ?>
 <?= $this->section('content'); ?>
 <section class="home">
-	<div class="text">
-		
-
-	</div>
+	<div class="text">Kelola Formulir Page</div>
 </section>
 <?= $this->endSection(); ?>
