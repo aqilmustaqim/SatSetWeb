@@ -114,82 +114,8 @@
             <button type="submit" class="btn btn-primary">Change Password</button>
           </div>
         </form><!-- End Change Password Form -->
-
       </div>
-
     </div><!-- End Bordered Tabs -->
-
-  </div>
-  </div>
-  <div class="row mb-3">
-    <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Full Name</label>
-    <div class="col-md-8 col-lg-5">
-      <input name="fullName" type="text" class="form-control" id="fullName" value="Fajar Indrawan">
-    </div>
-  </div>
-  <div class="row mb-3">
-    <label for="about" class="col-md-4 col-lg-3 col-form-label">About</label>
-    <div class="col-md-8 col-lg-5">
-      <textarea name="about" class="form-control" id="about" style="height: 100px">Lorem Ipsum</textarea>
-    </div>
-  </div>
-  <div class="row mb-3">
-    <label for="company" class="col-md-4 col-lg-3 col-form-label">Company</label>
-    <div class="col-md-8 col-lg-5">
-      <input name="company" type="text" class="form-control" id="company" value="SatSet Corporation">
-    </div>
-  </div>
-  <div class="row mb-3">
-    <label for="Job" class="col-md-4 col-lg-3 col-form-label">Job</label>
-    <div class="col-md-8 col-lg-5">
-      <input name="job" type="text" class="form-control" id="Job" value="Web Designer">
-    </div>
-  </div>
-
-  <div class="text-center">
-    <button type="submit" class="btn btn-primary">Save Changes</button>
-  </div>
-  </form><!-- End Profile Edit Form -->
-
-  </div>
-
-  <div class="tab-pane fade pt-3" id="profile-change-password">
-    <!-- Change Password Form -->
-    <form>
-
-      <div class="row mb-3">
-        <label for="currentPassword" class="col-md-4 col-lg-3 col-form-label">Current Password</label>
-        <div class="col-md-8 col-lg-5">
-          <input name="password" type="password" class="form-control" id="currentPassword">
-        </div>
-      </div>
-
-      <div class="row mb-3">
-        <label for="newPassword" class="col-md-4 col-lg-3 col-form-label">New Password</label>
-        <div class="col-md-8 col-lg-5">
-          <input name="newpassword" type="password" class="form-control" id="newPassword">
-        </div>
-      </div>
-
-      <div class="row mb-3">
-        <label for="renewPassword" class="col-md-4 col-lg-3 col-form-label">Re-enter New Password</label>
-        <div class="col-md-8 col-lg-5">
-          <input name="renewpassword" type="password" class="form-control" id="renewPassword">
-        </div>
-      </div>
-
-      <div class="text-center">
-        <button type="submit" class="btn btn-primary">Change Password</button>
-      </div>
-    </form><!-- End Change Password Form -->
-
-  </div>
-
-  </div><!-- End Bordered Tabs -->
-
-  </div>
-  </div>
-  </div>
   </div>
   <!-- bandingkan app yang sudah ada dengan click up , yg belom ada tulis di sprint 5 -->
 </section>
