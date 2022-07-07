@@ -1,8 +1,7 @@
 <?= $this->extend('templates/admin'); ?>
 <?= $this->section('content'); ?>
-<section>
-  
-    <div>
+<section class="home">
+    <div class="text">
         <div class="card-body profile-card pt-2 d-flex flex-column align-items-center">
             <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80" alt="Profile" style="width: 250px;" class="rounded-circle">
             <h2><?= $nama ?></h2>
@@ -14,7 +13,7 @@
             <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-edit">Edit Profile</button>
           </li>
           <li class="nav-item">
-            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-change-password">Ubah Password</button>
+            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-change-password">Ubah Password</button>            
           </li>
         </ul>
         <div class="tab-content">
@@ -24,7 +23,7 @@
                 <h5>Profile Details</h5>
                   <div class="row">
                     <div class="col-lg-6">Full Name</div>
-                    <div class="col-lg-6">Fajar Indrawan</div>
+                    <div class="col-lg-6"><?= $nama ?></div>
                   </div>
                   <div class="row">
                     <div class="col-lg-6">Company</div>
@@ -50,9 +49,9 @@
                       <label for="profileImage" class="col-md-4 col-lg-3 col-form-label">Profile Image</label>
                       <div class="col-md-8 col-lg-9">
                         <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80" style="width: 150px; height: 150px;" alt="Profile">
-                        <div class="pt-2">
-                          <button onclick="myFunction()" class="btn btn-primary btn-sm" title="Upload Foto"><i class='bx bx-upload'></i></button>
-                          <button onclick="myFunction()" class="btn btn-danger btn-sm" title="Hapus Foto"><i class='bx bx-trash'></i></button>
+                        <div class="pt-2">                         
+                          <button class="btn btn-primary btn-sm tombol-upload"><i class='bx bx-upload'></i></button>
+                          <button class="btn btn-danger btn-sm" ><i class='bx bx-trash'></i></button>
                         </div>
                       </div>
                     </div>
@@ -85,13 +84,11 @@
                       <button type="submit" class="btn btn-primary">Save Changes</button>
                     </div>
                   </form><!-- End Profile Edit Form -->
-
                 </div>
 
                 <div class="tab-pane fade pt-3" id="profile-change-password">
                   <!-- Change Password Form -->
                   <form>
-
                     <div class="row mb-3">
                       <label for="currentPassword" class="col-md-4 col-lg-3 col-form-label">Current Password</label>
                       <div class="col-md-8 col-lg-5">
