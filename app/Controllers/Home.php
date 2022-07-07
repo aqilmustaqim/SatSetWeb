@@ -151,4 +151,11 @@ class Home extends BaseController
         session()->remove($dataSession);
         return redirect()->to(base_url());
     }
+
+    public function deleteform($id){
+        if (this->FormModel->delete($id)) {
+            session()->setFlashdata('Form', 'Form Di Hapus! ');
+            return redirect()->to(base_url('Home/kelolaform'));
+        }
+    }
 }
