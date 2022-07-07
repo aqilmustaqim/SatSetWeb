@@ -266,7 +266,7 @@ body.dark .switch::before{
 }
 
 .home{
-    position: relative;
+    position: fixed;
     top: 0;
     left: 250px;
     height: 100vh;
