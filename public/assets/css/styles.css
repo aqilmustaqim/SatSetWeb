@@ -9,7 +9,8 @@
 
 :root{
     /* ===== Colors ===== */
-    --body-color: #E4E9F7;
+    /*#E4E9F7*/
+    --body-color: #FFFFFF;
     --sidebar-color: #FFF;
     --primary-color: #695CFE;
     --primary-color-light: #F6F5FF;
@@ -265,7 +266,7 @@ body.dark .switch::before{
 }
 
 .home{
-    position: absolute;
+    position: relative;
     top: 0;
     left: 250px;
     height: 100vh;
@@ -274,7 +275,7 @@ body.dark .switch::before{
     transition: var(--tran-05);
 }
 .home .text{
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 500;
     color: var(--text-color);
     padding: 12px 60px;
