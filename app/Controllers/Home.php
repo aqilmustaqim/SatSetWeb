@@ -3,14 +3,17 @@
 namespace App\Controllers;
 
 use App\Models\PortfolioModel;
+use App\Models\FormulirModel;
 
 class Home extends BaseController
 {
     protected $PortModel;
+    protected $FormModel;
 
     public function __construct()
     {
         $this->PortModel = new PortfolioModel();
+        $this->FormModel = new FormulirModel();
     }
 
     public function index()
@@ -110,12 +113,13 @@ class Home extends BaseController
         echo view('admin/kelola_paket', $data);
     }
 
-    public function kelolaform()
-    {
-        $data = [
-            'title' => 'SatSetWeb || kelola Form'
+    public function kelolaform(){
+        $formdata = $this->FormModel->findAll();
+        $datas = [
+            'title' => 'SatSetWeb || kelola Form',
+            'formdata' => $formdata
         ];
-        echo view('admin/kelola_formulir', $data);
+        echo view('admin/kelola_formulir', $datas);
     }
 
     public function kelolaUlasan()
