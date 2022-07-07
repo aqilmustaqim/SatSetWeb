@@ -5,4 +5,4 @@
    <div class="text">Kelola Ulasan</div>
 </section>
 
-<?php $this->endSection(); ?>
+<?= $this->endSection(); ?>
