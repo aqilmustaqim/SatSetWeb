@@ -81,9 +81,5 @@
 </div>
 </div>
 </section>
-<<<<<<< HEAD
 
 <?php $this->endSection(); ?>
-=======
-$<?php $this->endSection(); ?>
->>>>>>> 4142361621465289a891fd16503fe2153bc43db8
