@@ -2,7 +2,7 @@
 <?php $this->section('content'); ?>
 
 <section class="home">
-   <div class="text">Dashboard</div>
+    <div class="text">Dashboard</div>
 </section>
 
-$<?php $this->endSection(); ?>
+<?php $this->endSection(); ?>
