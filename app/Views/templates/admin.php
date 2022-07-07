@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,7 @@
 
     <!-- Favicons -->
     <link href="<?= base_url(); ?>/assets/img/Icon/icons8-lightning-bolt-color-glass-16.png" rel="icon">
-    
+
     <!----======== CSS ======== -->
     <link rel="stylesheet" href="<?= base_url() ?>/assets/css/styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -39,9 +40,9 @@
                 </li>
                 <li class="">
                     <a href="<?= base_url('Home/porto'); ?>">
-                        <i class='bx bx-receipt icon'></i>                        
+                        <i class='bx bx-receipt icon'></i>
                         <span class="text nav-text">Kelola Portfolio</span>
-                        </a>
+                    </a>
                 </li>
                 <li class="">
                     <a href="<?= base_url('Home/kelolapaket'); ?>">
@@ -90,6 +91,7 @@
         </div>
     </nav>
     <?= $this->renderSection('content'); ?>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="<?= base_url(); ?>/assets/js/sweetalert2.all.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
@@ -114,4 +116,5 @@
         });
     </script>
 </body>
+
 </html>
