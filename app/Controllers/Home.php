@@ -140,8 +140,46 @@ class Home extends BaseController
         }
     }
 
-    public function kelolaUlasan()
-    {
+    public function UpdateFormProses($id){
+     if ($this->FormModel->save([
+            'id' => $id,
+            'status' => "Proses"
+        ])) {
+            session()->setFlashdata('Formsukses', 'Berhasil Update Status :)');
+            return redirect()->to(base_url('Home/kelolaform'));
+        }else{
+            session()->setFlashdata('Formgagal', 'Gagal Update Status !!!');
+            return redirect()->to(base_url('Home/kelolaform'));
+        }   
+    }
+
+    public function UpdateFormDone($id){
+     if ($this->FormModel->save([
+            'id' => $id,
+            'status' => "Done"
+        ])) {
+            session()->setFlashdata('Formsukses', 'Berhasil Update Status :)');
+            return redirect()->to(base_url('Home/kelolaform'));
+        }else{
+            session()->setFlashdata('Formgagal', 'Gagal Update Status !!!');
+            return redirect()->to(base_url('Home/kelolaform'));
+        }   
+    }
+
+    public function UpdateFormTolak($id){
+     if ($this->FormModel->save([
+            'id' => $id,
+            'status' => "Tolak"
+        ])) {
+            session()->setFlashdata('Formsukses', 'Berhasil Update Status :)');
+            return redirect()->to(base_url('Home/kelolaform'));
+        }else{
+            session()->setFlashdata('Formgagal', 'Gagal Update Status !!!');
+            return redirect()->to(base_url('Home/kelolaform'));
+        }   
+    }
+
+    public function kelolaUlasan(){
         $data = [
             'title' => 'SatSetWeb || kelola Ulasan'
         ];
