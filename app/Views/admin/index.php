@@ -5,6 +5,7 @@
    <div class="text">
       <div class="container">
          <div class="row">
+
             <!-- Jumlah User -->  
             <div class="col-4">         
                <div class="card mt-2" style="width: 18rem;">
@@ -21,7 +22,6 @@
                   </div>
                </div>
             </div>
-            
             <!--End Jumlah User -->  
 
             <!-- Jumlah Portofolio -->   
@@ -41,7 +41,6 @@
                </div>
             </div>
             <!--End Jumlah Portofolio -->
-               
 
             <!-- Jumlah Forumulir -->
             <div class="col-4">
@@ -80,6 +79,7 @@
                </div>
             </div>
             <!-- End Jumlah Total Project -->
+
          </div>
       </div>
    </div>
