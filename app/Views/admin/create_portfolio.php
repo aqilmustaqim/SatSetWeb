@@ -3,7 +3,6 @@
 
 <section class="home">
     <h1 class="text py-3">Create New Portfolio</h1>
-
     <div class="container">
         <form action="<?= base_url(); ?>/Home/tambahPortfolio" method="post">
             <div class="mb-3">
@@ -33,9 +32,6 @@
 
             <button class="btn btn-primary"> Save </button>
         </form>
-
     </div>
-
 </section>
-
 <?= $this->endSection(); ?>

@@ -27,7 +27,6 @@
 		                        <td scope="col"><?= $data['status'] ?></td>
 		                        <td scope="col" class="text-start">
 		                        	<a href="<?= base_url(); ?>/Home/deleteform/<?= $data['id']; ?>" class="btn btn-sm btn-danger tombol-hapus"><i class="fa fas fa-trash"></i>Hapus</a>
-
 		                        </td>
 		                    </tr>
 		                <?php endforeach; ?>

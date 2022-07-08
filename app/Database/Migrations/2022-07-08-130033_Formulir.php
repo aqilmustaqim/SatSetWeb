@@ -6,9 +6,8 @@ use CodeIgniter\Database\Migration;
 
 class Formulir extends Migration
 {
-    public function up()
-    {   
-        $this->forge->addField([
+    public function up(){
+    $this->forge->addField([
         'id'          => [
             'type'           => 'INT',
             'constraint'     => 11,
@@ -31,13 +30,17 @@ class Formulir extends Migration
             'type'           => 'VARCHAR',
             'constraint'     => '30'
         ],
+        'status' => [
+            'type'           =>  'VARCHAR',
+            'constraint'     => '30'
+        ],
         'created_at' => [
             'type'           => 'DATETIME',
-            'null'             => TRUE
+            'null'           => TRUE
         ],
         'updated_at' => [
             'type'           => 'DATETIME',
-            'null'             => TRUE
+            'null'           => TRUE
         ]
     ]);
     $this->forge->addKey('id', TRUE);

@@ -122,22 +122,30 @@ class Home extends BaseController
         echo view('admin/kelola_formulir', $datas);
     }
 
+    public function TambahForm(){
+        if (!session()->get('logged_in')) {
+            return redirect()->to(base_url('login'));
+        }else if ($this->FormModel->save([
+            'nama' => $this->request->getVar('inputNama'),
+            'email' => $this->request->getVar('inputEmail'),
+            'nomor_wa' => $this->request->getVar('inputWA'),
+            'jenis_paket' => $this->request->getVar('inputPaket'),
+            'status' => "Baru"
+        ])) {
+            session()->setFlashdata('Formsukses', 'Formulir Permintaan Anda Sudah Masuk, Harap Tunggu Info Selanjutnya via Whatsapp !');
+            return redirect()->to(base_url('Home/index'));
+        }else{
+            session()->setFlashdata('Formgagal', 'Formulir Gagal Di Submit!');
+            return redirect()->to(base_url('Home/index'));
+        }
+    }
+
     public function kelolaUlasan()
     {
         $data = [
             'title' => 'SatSetWeb || kelola Ulasan'
         ];
         echo view('admin/kelola_ulasan', $data);
-    }
-
-    public function cek()
-    {
-        if (!session()->get('logged_in')) {
-            return redirect()->to(base_url('login'));
-        } else {
-            session()->setFlashdata('sukses', 'Hehehehehhehehehehehheheheh');
-            return redirect()->to(base_url('#Form'));
-        }
     }
 
     public function logout()
@@ -153,7 +161,7 @@ class Home extends BaseController
     }
 
     public function deleteform($id){
-        if (this->FormModel->delete($id)) {
+        if ($this->FormModel->delete($id)) {
             session()->setFlashdata('Form', 'Form Di Hapus! ');
             return redirect()->to(base_url('Home/kelolaform'));
         }

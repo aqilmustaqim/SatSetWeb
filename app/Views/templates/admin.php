@@ -113,7 +113,7 @@
             } else {
                 modeText.innerText = "Dark mode";
             }
-        });
+        })
     </script>
 </body>
 

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 12 Jun 2022 pada 10.26
+-- Waktu pembuatan: 23 Jun 2022 pada 10.10
 -- Versi server: 10.4.24-MariaDB
 -- Versi PHP: 8.1.6
 
@@ -20,22 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `satsetweb`
 --
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `formulir`
---
-
-CREATE TABLE `formulir` (
-  `id` int(11) UNSIGNED NOT NULL,
-  `nama` varchar(50) NOT NULL,
-  `email` varchar(128) NOT NULL,
-  `nomor_wa` varchar(20) NOT NULL,
-  `jenis_paket` varchar(30) NOT NULL,
-  `created_at` datetime DEFAULT NULL,
-  `updated_at` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -60,8 +44,7 @@ CREATE TABLE `migrations` (
 INSERT INTO `migrations` (`id`, `version`, `class`, `group`, `namespace`, `time`, `batch`) VALUES
 (1, '2022-06-08-063143', 'App\\Database\\Migrations\\Users', 'default', 'App', 1654670141, 1),
 (2, '2022-06-08-063157', 'App\\Database\\Migrations\\UserRole', 'default', 'App', 1654670141, 1),
-(3, '2022-06-08-083151', 'App\\Database\\Migrations\\Portfolio', 'default', 'App', 1655022304, 2),
-(4, '2022-06-10-152815', 'App\\Database\\Migrations\\Formulir', 'default', 'App', 1655022304, 2);
+(3, '2022-06-08-083151', 'App\\Database\\Migrations\\Portfolio', 'default', 'App', 1654677401, 2);
 
 -- --------------------------------------------------------
 
@@ -77,6 +60,14 @@ CREATE TABLE `portfolio` (
   `gambar` varchar(128) NOT NULL,
   `link` varchar(128) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data untuk tabel `portfolio`
+--
+
+INSERT INTO `portfolio` (`id`, `nama`, `deskripsi`, `jenis`, `gambar`, `link`) VALUES
+(1, 'App Bakery', 'App Bakery adalah Website Sistem Informasi yang berguna untuk mencatat jual beli roti yang terjadi di toko roti.', 'Sistem Infomasi Website', 'coba', 'https://aplikasibakery.000webhostapp.com/'),
+(3, 'AppSampah', 'test', 'Web Perusahaan', '', 'www.appsampah.com');
 
 -- --------------------------------------------------------
 
@@ -129,12 +120,6 @@ INSERT INTO `user_role` (`id`, `role`) VALUES
 --
 
 --
--- Indeks untuk tabel `formulir`
---
-ALTER TABLE `formulir`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indeks untuk tabel `migrations`
 --
 ALTER TABLE `migrations`
@@ -163,22 +148,16 @@ ALTER TABLE `user_role`
 --
 
 --
--- AUTO_INCREMENT untuk tabel `formulir`
---
-ALTER TABLE `formulir`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT untuk tabel `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT untuk tabel `portfolio`
 --
 ALTER TABLE `portfolio`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT untuk tabel `users`
