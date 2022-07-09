@@ -4,16 +4,19 @@ namespace App\Controllers;
 
 use App\Models\PortfolioModel;
 use App\Models\FormulirModel;
+use App\Models\UsersModel;
 
 class Home extends BaseController
 {
     protected $PortModel;
     protected $FormModel;
+    protected $usersModel;
 
     public function __construct()
     {
         $this->PortModel = new PortfolioModel();
         $this->FormModel = new FormulirModel();
+        $this->usersModel = new UsersModel();
     }
 
     public function index()
@@ -29,7 +32,8 @@ class Home extends BaseController
     {
         $title = [
             'title' => "SatSetWeb || Profile",
-            'nama'  => session()->get('nama')
+            'nama'  => session()->get('nama'),
+            'email' => session()->get('email')
         ];
         return view('admin/profile', $title);
     }
@@ -204,4 +208,31 @@ class Home extends BaseController
             return redirect()->to(base_url('Home/kelolaform'));
         }
     }
+
+
+    public function updatePassword($email)
+    {
+        $user = $this->usersModel->where(['email' => $email])->first();
+        $password = $this->request->getVar('password');
+        if (!password_verify($password, $user['password'])) {
+            session()->setFlashdata('Pass', 'Password Salah !');
+            return redirect()->to(base_url('Home/profile'));
+        }else if ($this->request->getVar('newpassword') !== $this->request->getVar('confirmpassword')) {
+            session()->setFlashdata('KonfirmPass','Konfirmasi Password Tidak Sama !');
+            return redirect()->to(base_url('Home/profile'));
+        }else if ($this->usersModel->save([
+            'id'    => $user['id'],
+            'password' => password_hash($this->request->getVar('confirmpassword'), PASSWORD_DEFAULT)
+        ])) {
+            session()->setFlashdata('ChangePass','Password Berhasil diubah !');
+            return redirect()->to(base_url('Home/profile'));
+        }
+    }
+
+
+    public function updateBio()
+    {
+        // code...
+    }
+
 }

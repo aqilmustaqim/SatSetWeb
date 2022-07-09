@@ -2,6 +2,28 @@
 <?= $this->section('content'); ?>
 <section class="home">
   <div class="text">
+    <?php if (session()->getFlashData('Pass')) : ?>
+        <div class="alert alert-danger solid alert-dismissible fade show" style="text-align: center;">
+            <strong><?= session()->getFlashdata('Pass'); ?></strong>
+            <button type="button" data-dismiss="alert" aria-label="Close">
+              <i class="bi bi-x-square"></i>
+            </button>
+        </div>
+    <?php elseif (session()->getFlashData('KonfirmPass')) : ?>
+        <div class="alert alert-warning solid alert-dismissible fade show" style="text-align: center;">
+            <strong><?= session()->getFlashdata('KonfirmPass'); ?></strong>
+            <button type="button" data-dismiss="alert" aria-label="Close">
+              <i class="bi bi-x-square"></i>
+            </button>
+        </div>
+    <?php elseif (session()->getFlashData('ChangePass')) : ?>
+        <div class="alert alert-success solid alert-dismissible fade show" style="text-align: center;">
+            <strong><?= session()->getFlashdata('ChangePass'); ?></strong>
+            <button type="button" data-dismiss="alert" aria-label="Close">
+              <i class="bi bi-x-square"></i>
+            </button>
+        </div>
+    <?php endif; ?>
     <div class="card-body profile-card pt-2 d-flex flex-column align-items-center">
       <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80" alt="Profile" style="width: 250px;" class="rounded-circle">
       <h2><?= $nama ?></h2>
@@ -43,11 +65,13 @@
         </div>
       </div>
       <div class="tab-pane fade profile-edit pt-3" id="profile-edit">
+        
+
         <!-- Profile Edit Form -->
-        <form>
+        <form action="" method="post">
           <div class="row mb-3">
             <label for="profileImage" class="col-md-4 col-lg-3 col-form-label">Profile Image</label>
-            <div class="col-md-8 col-lg-9">
+            <div class="col-md-4">
               <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80" style="width: 150px; height: 150px;" alt="Profile">
               <div class="pt-2">
                 <button type="button" class="btn btn-primary btn-sm"><i class='bx bx-upload'></i></button>
@@ -58,19 +82,7 @@
           <div class="row mb-3">
             <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Full Name</label>
             <div class="col-md-8 col-lg-5">
-              <input name="fullName" type="text" class="form-control" id="fullName" value="Fajar Indrawan">
-            </div>
-          </div>
-          <div class="row mb-3">
-            <label for="about" class="col-md-4 col-lg-3 col-form-label">About</label>
-            <div class="col-md-8 col-lg-5">
-              <textarea name="about" class="form-control" id="about" style="height: 100px">Lorem Ipsum</textarea>
-            </div>
-          </div>
-          <div class="row mb-3">
-            <label for="company" class="col-md-4 col-lg-3 col-form-label">Company</label>
-            <div class="col-md-8 col-lg-5">
-              <input name="company" type="text" class="form-control" id="company" value="SatSet Corporation">
+              <input name="fullName" type="text" class="form-control" id="fullName" value="<?= $nama ?>">
             </div>
           </div>
           <div class="row mb-3">
@@ -88,7 +100,7 @@
 
       <div class="tab-pane fade pt-3" id="profile-change-password">
         <!-- Change Password Form -->
-        <form>
+        <form action="<?= base_url() ?>/Home/updatePassword/<?= $email ?>" method="post">
           <div class="row mb-3">
             <label for="currentPassword" class="col-md-4 col-lg-3 col-form-label">Current Password</label>
             <div class="col-md-8 col-lg-5">
@@ -106,7 +118,7 @@
           <div class="row mb-3">
             <label for="renewPassword" class="col-md-4 col-lg-3 col-form-label">Re-enter New Password</label>
             <div class="col-md-8 col-lg-5">
-              <input name="renewpassword" type="password" class="form-control" id="renewPassword">
+              <input name="confirmpassword" type="password" class="form-control" id="renewPassword">
             </div>
           </div>
 
@@ -119,9 +131,4 @@
   </div>
   <!-- bandingkan app yang sudah ada dengan click up , yg belom ada tulis di sprint 5 -->
 </section>
-<script>
-  $('.tombol-hapus').on('click', function() {
-    console.log('halo');
-  });
-</script>
 <?= $this->endSection(); ?>
