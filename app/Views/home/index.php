@@ -153,6 +153,7 @@
         <div class="row portfolio-container justify-content-center">
             <div class="col-lg-11">
                 <div class="row justify-content-center">
+                    <!-- Portfolio item -->
                     <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item tokoonline">
                         <div class="portfolio-wrap border">
                             <img src="<?= base_url(); ?>/assets/img/portfolio/portfolio1.png" class="img-fluid" alt="">
@@ -163,7 +164,34 @@
                                 </div>
                             </div>
                         </div>
-                    </div><!-- End portfolio item -->
+                    </div>
+                    <!-- End portfolio item -->
+                    <!-- Portfolio item -->
+                    <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item tokoonline">
+                        <div class="portfolio-wrap border">
+                            <img src="<?= base_url(); ?>/assets/img/portfolio/portfolio1.png" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>Bakery APP</h4>
+                                <div class="portfolio-links">
+                                    <a href="https://aplikasibakery.000webhostapp.com/" target="_blank" title="More Details"><i class="bi bi-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End portfolio item -->
+                    <!-- Portfolio item -->
+                    <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item tokoonline">
+                        <div class="portfolio-wrap border">
+                            <img src="<?= base_url(); ?>/assets/img/portfolio/portfolio1.png" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>Bakery APP</h4>
+                                <div class="portfolio-links">
+                                    <a href="https://aplikasibakery.000webhostapp.com/" target="_blank" title="More Details"><i class="bi bi-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End portfolio item -->
                 </div>
             </div>
         </div>
