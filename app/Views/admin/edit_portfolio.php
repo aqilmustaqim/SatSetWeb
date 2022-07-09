@@ -2,8 +2,8 @@
 <?= $this->section('content'); ?>
 
 <section class="home">
-    <h1 class="text py-3">Edit Portfolio</h1>
-    <div class="container">
+    <h1 class="text py-3 text-center">Edit Portfolio</h1>
+    <div class="container text">
         <form action="<?= base_url(); ?>/Home/updatePortfolio/<?= $data['id']; ?>" method="post" enctype="multipart/form-data">
             <div class="mb-3">
                 <label class="form-label">Nama Website</label>

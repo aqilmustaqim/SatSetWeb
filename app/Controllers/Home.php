@@ -21,11 +21,12 @@ class Home extends BaseController
 
     public function index()
     {
-        $data = [
-            'title' => 'SatSetWeb || Home'
+        $data = $this->PortModel->findAll();
+        $datas = [
+            'title' => 'SatSetWeb || Home',
+            'data'  => $data
         ];
-
-        echo view('home/index', $data);
+        echo view('home/index', $datas);
     }
 
     public function profile()
