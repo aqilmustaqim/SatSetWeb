@@ -52,46 +52,37 @@
           <div class="col-lg-6">SatSet Corporation</div>
         </div>
         <div class="row">
-          <div class="col-lg-6">Job</div>
-          <div class="col-lg-6">Web Designer</div>
-        </div>
-        <div class="row">
-          <div class="col-lg-6">Phone</div>
-          <div class="col-lg-6">14022</div>
-        </div>
-        <div class="row">
           <div class="col-lg-6">Email</div>
-          <div class="col-lg-6">alvin@gmail.com</div>
+          <div class="col-lg-6"><?= $email ?></div>
         </div>
       </div>
       <div class="tab-pane fade profile-edit pt-3" id="profile-edit">
         
 
         <!-- Profile Edit Form -->
-        <form action="" method="post">
+        <form action="<?= base_url(); ?>/Home/updateBio/<?= $email ?>" method="post" enctype="multipart/form-data">
           <div class="row mb-3">
             <label for="profileImage" class="col-md-4 col-lg-3 col-form-label">Profile Image</label>
             <div class="col-md-4">
               <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80" style="width: 150px; height: 150px;" alt="Profile">
               <div class="pt-2">
-                <button type="button" class="btn btn-primary btn-sm"><i class='bx bx-upload'></i></button>
-                <button type="button" class="btn btn-danger btn-sm"><i class='bx bx-trash'></i></button>
+                <button type="button" name="changeimg" class="btn btn-primary btn-sm"><i class='bx bx-upload'></i></button>
+                <button type="button" name="hapusimg" class="btn btn-danger btn-sm"><i class='bx bx-trash'></i></button>
               </div>
             </div>
           </div>
           <div class="row mb-3">
             <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Full Name</label>
             <div class="col-md-8 col-lg-5">
-              <input name="fullName" type="text" class="form-control" id="fullName" value="<?= $nama ?>">
+              <input name="namaganti" type="text" class="form-control" id="fullName">
             </div>
           </div>
           <div class="row mb-3">
-            <label for="Job" class="col-md-4 col-lg-3 col-form-label">Job</label>
+            <label for="Email" class="col-md-4 col-lg-3 col-form-label">Email</label>
             <div class="col-md-8 col-lg-5">
-              <input name="job" type="text" class="form-control" id="Job" value="Web Designer">
+              <input name="emailganti" type="email" class="form-control" id="email">
             </div>
           </div>
-
           <div class="text-center">
             <button type="submit" class="btn btn-primary">Save Changes</button>
           </div>

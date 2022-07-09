@@ -212,7 +212,7 @@ class Home extends BaseController
 
     public function updatePassword($email)
     {
-        $user = $this->usersModel->where(['email' => $email])->first();
+        $user = $this->usersModel->where('email',$email)->first();
         $password = $this->request->getVar('password');
         if (!password_verify($password, $user['password'])) {
             session()->setFlashdata('Pass', 'Password Salah !');
@@ -230,9 +230,21 @@ class Home extends BaseController
     }
 
 
-    public function updateBio()
-    {
-        // code...
+    public function updateBio($email)
+    {   
+        //kurang upload gambar admin :V
+        $user = $this->usersModel->where('email',$email)->first();
+        if ($this->usersModel->save([
+            'id'   => $user['id'],
+            'nama' => $this->request->getVar('namaganti'),
+            'email' => $this->request->getVar('emailganti')
+        ])) {
+            session()->setFlashdata('ChangeBio','Biodata Berhasil diubah !');
+            return redirect()->to(base_url('Home/profile'));   
+        }else{
+            session()->setFlashdata('FailChangeBio','Gagal Update Bio !');
+            return redirect()->to(base_url('Home/profile'));
+        }
     }
 
 }
