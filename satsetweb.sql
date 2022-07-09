@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 08 Jul 2022 pada 17.31
+-- Waktu pembuatan: 09 Jul 2022 pada 17.39
 -- Versi server: 10.4.24-MariaDB
 -- Versi PHP: 8.1.6
 
@@ -95,7 +95,7 @@ CREATE TABLE `portfolio` (
 
 INSERT INTO `portfolio` (`id`, `nama`, `deskripsi`, `jenis`, `gambar`, `link`) VALUES
 (1, 'App Bakery', 'App Bakery adalah Website Sistem Informasi yang berguna untuk mencatat jual beli roti yang terjadi di toko roti.', 'Sistem Infomasi Website', 'coba', 'https://aplikasibakery.000webhostapp.com/'),
-(3, 'AppSampah', 'test', 'Web Perusahaan', '', 'www.appsampah.com');
+(3, 'AppSampah', 'test', 'Web Perusahaan', '', 'https://www.appsampah.com');
 
 -- --------------------------------------------------------
 
@@ -120,7 +120,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `nama`, `email`, `password`, `foto`, `role_id`, `is_active`, `created_at`, `updated_at`) VALUES
-(1, 'Alvin', 'alvin@gmail.com', '$2y$10$Fgu0os8kuMI6WpvRVU9R9eoMSv9lBim6AWWgHKp4whCrBcJ/iRtWm', '', 1, 1, '2022-06-08 14:38:32', '2022-06-08 14:38:32'),
+(1, 'Alvintino', 'zeronep960@gmail.com', '$2y$10$IsKhjxt/yUZJop/wcfn7Z.lr4GEa7er243i2eKyz2lcmaAX.lBMYi', '', 1, 1, '2022-06-08 14:38:32', '2022-07-09 20:40:53'),
 (2, 'Fiqri Baihaqi', 'fiqri@gmail.com', '$2y$10$rGhReigCp8tQoXio9BCgMeMD9VLJze/T1n77f6s.L2Oaa8bRUqZHS', '', 2, 1, '2022-06-08 14:52:33', '2022-06-08 14:52:33'),
 (3, 'Aqil Mustaqim', 'aqilmustaqim28@gmail.com', '$2y$10$9pFMsrRk9upNEyMMZdJWC.7rsDRWDiyukOJLtXc0rG6hinvlHLjp.', '', 1, 1, '2022-06-08 15:18:27', '2022-06-08 15:18:27');
 
@@ -203,7 +203,7 @@ ALTER TABLE `portfolio`
 -- AUTO_INCREMENT untuk tabel `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT untuk tabel `user_role`
