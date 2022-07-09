@@ -4,7 +4,7 @@
 <section class="home">
     <h1 class="text py-3">Edit Portfolio</h1>
     <div class="container">
-        <form action="<?= base_url(); ?>/Home/updatePortfolio/<?= $data['id']; ?>" method="post">
+        <form action="<?= base_url(); ?>/Home/updatePortfolio/<?= $data['id']; ?>" method="post" enctype="multipart/form-data">
             <div class="mb-3">
                 <label class="form-label">Nama Website</label>
                 <input type="text" name="nama_website" class="form-control" id="formGroupExampleInput" value="<?= $data['nama']; ?>">
