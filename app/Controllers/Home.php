@@ -274,4 +274,19 @@ class Home extends BaseController
         }
     }
 
+    public function DeletePaketPage()
+    {
+
+        return redirect()->to(base_url('Home/kelolapaket'));
+    }
+
+    public function CreatePaketPage()
+    {
+        return view('admin/KelolaDaftarPaket/create');
+    }
+    
+    public function EditPaketPage()
+    {
+        return view('admin/KelolaDaftarPaket/update');
+    }
 }
