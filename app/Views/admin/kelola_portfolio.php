@@ -2,7 +2,7 @@
 <?= $this->section('content'); ?>
 
 <section class="home">
-    <h1 class="text py-3">Kelola Portfolio</h1>
+    <h1 class="text py-3 text-center">Kelola Portfolio</h1>
     <div class="porto" data-porto="<?= session()->getFlashdata('porto'); ?>"></div>
     <div class="container">
         <table class="table table-hover">
