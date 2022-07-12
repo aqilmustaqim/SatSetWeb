@@ -271,6 +271,46 @@
     </div>
 </section>
 
+<!-- Form Ulasan -->
+<section id="FormUlasan">
+    <div class="justify-content-center">
+        <?php if (session()->getFlashData('suksesulasan')) : ?>
+            <div class="alert alert-success solid alert-dismissible fade show" style="text-align: center;">
+                <strong>Berhasil ! <?= session()->getFlashdata('suksesulasan'); ?></strong>
+                <button type="button" data-dismiss="alert" aria-label="Close">
+                    <i class="bi bi-x-square"></i>
+                </button>
+            </div>
+        <?php endif; ?>
+        <div class="section-title">
+            <h2>Form</h2>
+            <h1 class="mt-2">Ulasan</h1>
+        </div>
+        <div>
+            <form action="<?= base_url() ?>/Home/tambahulas" class="container-sm" method="post">
+                <?= csrf_Field() ?>
+                <div class="mt-1 sm">
+                    <label for="inputNama" class="form-label">Nama</label>
+                    <input type="text" class="form-control" name="inputNamaUlas" placeholder="Masukkan Nama">
+                </div>
+                <div class="mt-3 sm">
+                    <label for="inputEmail" class="form-label">Email</label>
+                    <input type="email" class="form-control" placeholder="Masukkan Email" name="inputEmailUlas">
+                </div>
+                <div class="mt-3 sm">
+                    <label for="exampleFormControlTextarea1" class="form-label">Ulasan</label>
+                    <textarea class="form-control" name="inputUlas" rows="3" placeholder="Masukkan Ulasan"></textarea>
+                </div>
+                <div class="mt-3 text-center">
+                    <button type="submit" class="btn btn-primary">Kirim</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+<!-- End Form Ulasan -->
+
+
 <!-- ======= Footer ======= -->
 <footer id="footer">
     <div class="footer-top">

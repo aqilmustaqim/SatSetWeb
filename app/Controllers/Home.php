@@ -5,18 +5,22 @@ namespace App\Controllers;
 use App\Models\PortfolioModel;
 use App\Models\FormulirModel;
 use App\Models\UsersModel;
+use App\Models\UlasanModel;
+
 
 class Home extends BaseController
 {
     protected $PortModel;
     protected $FormModel;
     protected $usersModel;
+    protected $UlasModel;
 
     public function __construct()
     {
         $this->PortModel = new PortfolioModel();
         $this->FormModel = new FormulirModel();
         $this->usersModel = new UsersModel();
+        $this->UlasModel = new UlasanModel();
     }
 
     public function index()
@@ -172,7 +176,7 @@ class Home extends BaseController
     }
 
     public function UpdateFormTolak($id){
-     if ($this->FormModel->save([
+        if ($this->FormModel->save([
             'id' => $id,
             'status' => "Tolak"
         ])) {
@@ -184,11 +188,36 @@ class Home extends BaseController
         }   
     }
 
-    public function kelolaUlasan(){
-        $data = [
-            'title' => 'SatSetWeb || kelola Ulasan'
+    public function kelolaulas(){
+        $ulasdata = $this->UlasModel->findAll();
+        $datas = [
+            'title' => 'SatSetWeb || kelola Ulas',
+            'ulasdata' => $ulasdata
         ];
-        echo view('admin/kelola_ulasan', $data);
+        echo view('admin/kelola_ulasan', $datas);
+    }
+
+    public function tambahulas(){
+        if (!session()->get('logged_in')) {
+            return redirect()->to(base_url('login'));
+        }else if ($this->UlasModel->save([
+            'nama' => $this->request->getVar('inputNamaUlas'),
+            'email' => $this->request->getVar('inputEmailUlas'),
+            'deskripsiulasan' => $this->request->getVar('inputUlas')
+        ])) {
+            session()->setFlashdata('Ulassukses', 'Ulasan Anda Sudah Masuk, Terimakasih');
+            return redirect()->to(base_url('Home/index'));
+        }else{
+            session()->setFlashdata('Ulasgagal', 'Ulasan Gagal Di Submit!');
+            return redirect()->to(base_url('Home/index'));
+        }
+    }
+
+    public function deleteulas($id){
+        if ($this->UlasModel->delete($id)) {
+            session()->setFlashdata('ulas', 'ulas Di Hapus! ');
+            return redirect()->to(base_url('Home/kelolaulas'));
+        }
     }
 
     public function logout()

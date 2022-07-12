@@ -57,7 +57,7 @@
                     </a>
                 </li>
                 <li class="">
-                    <a href="<?= base_url('Home/kelolaUlasan'); ?>">
+                    <a href="<?= base_url('Home/kelolaulas'); ?>">
                         <i class='bx bx-message-alt-minus icon'></i>
                         <span class="text nav-text">Kelola Ulasan</span>
                     </a>
