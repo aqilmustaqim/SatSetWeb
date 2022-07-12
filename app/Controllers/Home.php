@@ -15,16 +15,14 @@ class Home extends BaseController
     protected $usersModel;
     protected $UlasModel;
 
-    public function __construct()
-    {
+    public function __construct(){
         $this->PortModel = new PortfolioModel();
         $this->FormModel = new FormulirModel();
         $this->usersModel = new UsersModel();
         $this->UlasModel = new UlasanModel();
     }
 
-    public function index()
-    {
+    public function index(){
         $data = $this->PortModel->findAll();
         $datas = [
             'title' => 'SatSetWeb || Home',
@@ -33,8 +31,7 @@ class Home extends BaseController
         echo view('home/index', $datas);
     }
 
-    public function profile()
-    {
+    public function profile(){
         $title = [
             'title' => "SatSetWeb || Profile",
             'nama'  => session()->get('nama'),
