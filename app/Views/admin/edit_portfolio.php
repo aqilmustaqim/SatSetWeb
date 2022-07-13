@@ -5,6 +5,7 @@
     <h1 class="text py-3 text-center">Edit Portfolio</h1>
     <div class="container text">
         <form action="<?= base_url(); ?>/Home/updatePortfolio/<?= $data['id']; ?>" method="post" enctype="multipart/form-data">
+            <input type="hidden" value="<?= $data['gambar']; ?>" name="fotoLama">
             <div class="mb-3">
                 <label class="form-label">Nama Website</label>
                 <input type="text" name="nama_website" class="form-control" id="formGroupExampleInput" value="<?= $data['nama']; ?>">

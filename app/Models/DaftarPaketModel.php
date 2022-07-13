@@ -6,7 +6,7 @@ use CodeIgniter\Model;
 
 class DaftarPaketModel extends Model
 {
-    protected $table            = 'daftarpakets';
+    protected $table            = 'daftarpaket';
     protected $primaryKey       = 'id';
-    protected $allowedFields    = ['namapaket','deskripsi1','hargapaket'];
+    protected $allowedFields    = ['namapaket', 'hargapaket', 'deskripsi1', 'deskripsi2', 'deskripsi3', 'deskripsi4', 'deskripsi5', 'deskripsi6', 'deskripsi7', 'deskripsi8', 'deskripsi9'];
 }

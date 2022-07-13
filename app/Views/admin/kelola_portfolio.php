@@ -13,6 +13,7 @@
                     <th scope="col">Nama Web</th>
                     <th scope="col">Jenis Web</th>
                     <th scope="col">Link Web</th>
+                    <th scope="col">Gambar Web</th>
                     <th scope="col">Status</th>
                 </tr>
             </thead>
@@ -24,6 +25,9 @@
                         <td scope="col"><?php echo $d['nama']; ?></td>
                         <td scope="col"><?php echo $d['jenis']; ?></td>
                         <td scope="col"><?php echo $d['link']; ?></td>
+                        <td>
+                            <img class="img img-thumbnail" src="<?= base_url('assets'); ?>/img/portfolio/<?= $d['gambar']; ?>" width="100px" alt="">
+                        </td>
                         <td scope="col" class="text-start">
                             <a href="<?= base_url(); ?>/Home/editporto/<?= $d['id']; ?>" class="btn btn-sm btn-primary" role="button">EDIT</a>
                             <a href="<?= base_url(); ?>/Home/hapusPortfolio/<?= $d['id']; ?>" class="btn btn-sm btn-danger tombol-hapus"><i class="fa fas fa-trash"></i>Hapus</a>

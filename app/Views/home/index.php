@@ -153,12 +153,12 @@
         <div class="row portfolio-container justify-content-center">
             <div class="col-lg-11">
                 <div class="row justify-content-center">
-                    <?php foreach ($data as $dp) : ?>
+                    <?php foreach ($portfolio as $dp) : ?>
                         <!-- Portfolio item -->
                         <!-- kurang gambar nya :C -->
                         <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item tokoonline">
                             <div class="portfolio-wrap border">
-                                <img src="<?= base_url(); ?>/assets/img/portfolio/portfolio1.png" class="img-fluid" alt="">
+                                <img src="<?= base_url(); ?>/assets/img/portfolio/<?= $dp['gambar']; ?>" class="img-fluid" alt="">
                                 <div class="portfolio-info">
                                     <h4><?= $dp['nama']; ?></h4>
                                     <div class="portfolio-links">
@@ -167,7 +167,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- End portfolio item -->                        
+                        <!-- End portfolio item -->
                     <?php endforeach; ?>
                 </div>
             </div>
@@ -184,42 +184,25 @@
             <p>Berikut ini adalah beberapa ulasan dari pelanggan kami.</p>
         </div>
 
+
         <div class="row justify-content-center mx-3">
-            <div class="col-3">
-            <div class="card" style="width: 18rem;">
-                <img src="<?= base_url(); ?>/assets/ulasan/ulasan 0.png" class="card-img-top" alt="">
-                <div class="card-body">
-                    <h5 class="card-title">Sergio de Paula</h5>
-                    <p class="card-text text-warning"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></i></p>
-                    <p class="card-text" style="font-size: 14px">Melebihi harapan saya, SatSetWeb sangat profesional. informatif, dan memenuhi ekspetasi saya. Thanks SatSetWeb. Semoga dapat bekerja sama kembali.</p>
+            <?php foreach ($ulasan as $u) : ?>
+                <div class="col-3">
+                    <div class="card" style="width: 18rem;">
+                        <img src="<?= base_url(); ?>/assets/ulasan/ulasan 0.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title"><?= $u['nama']; ?></h5>
+                            <p class="card-text text-warning"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></i></p>
+                            <p class="card-text" style="font-size: 14px"><?= $u['deskripsiulasan']; ?></p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            </div>
+            <?php endforeach; ?>
 
 
-            <div class="col-3">
-            <div class="card" style="width: 18rem;">
-                <img src="<?= base_url(); ?>/assets/ulasan/ulasan 0.png" class="card-img-top" alt="">
-                <div class="card-body">
-                    <h5 class="card-title">Christopher Campbell</h5>
-                    <p class="card-text text-warning"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></p>
-                    <p class="card-text"  style="font-size: 14px">Keren banget, hasilnya diatas ekspetasi saya. Suka banget dengan pelayanannya, ramah ,fast respon, dan jujur. Terima kasih banyak atas kerja samanya!</p>
-                </div>
-            </div>
-            </div>
 
-            <div class="col-3">
-            <div class="card" style="width: 18rem;">
-                <img src="<?= base_url(); ?>/assets/ulasan/ulasan 0.png" class="card-img-top" alt="">
-                <div class="card-body">
-                    <h5 class="card-title">Štefan Štefančík</h5>
-                    <p class="card-text text-warning"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></p>
-                    <p class="card-text"  style="font-size: 14px">100% puas dengan hasil kerja SatSetWeb, sesuai dengan arahan dan keinginan saya. Komunikasi bagus, mantapp pokoknya. Tidak mengecewakan.</p>
-                </div>
-            </div>
-            </div>
         </div>
-        
+
         <!-- End testimonial-item -->
     </div>
 </section><!-- End Ulasan Section -->
