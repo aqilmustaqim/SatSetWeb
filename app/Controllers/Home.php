@@ -31,10 +31,12 @@ class Home extends BaseController
     {
         $portfolio = $this->PortModel->findAll();
         $ulasan = $this->UlasModel->findAll();
+        $daftarpaket = $this->DaftarPaketModel->findAll();
         $datas = [
             'title' => 'SatSetWeb || Home',
             'portfolio'  => $portfolio,
-            'ulasan' => $ulasan
+            'ulasan' => $ulasan,
+            'daftarpaket' => $daftarpaket
         ];
         return view('home/index', $datas);
     }
@@ -68,6 +70,8 @@ class Home extends BaseController
         ];
         return view('admin/create_portfolio', $title);
     }
+
+
 
     public function tambahPortfolio()
     {
@@ -154,6 +158,77 @@ class Home extends BaseController
             'data' => $daftarpaket
         ];
         return view('admin/kelola_paket', $data);
+    }
+    public function createpaket()
+    {
+        $title = [
+            'title' => "SatSetWeb || Daftar Paket",
+        ];
+        return view('admin/create_paket', $title);
+    }
+
+    public function tambahDaftarpaket()
+    {
+        //Masukkan Data Ke Website
+        if ($this->DaftarPaketModel->save([
+            'namapaket' => $this->request->getVar('nama_paket'),
+            'hargapaket' => $this->request->getVar('harga_paket'),
+            'deskripsi1' => $this->request->getVar('deskripsi_1'),
+            'deskripsi2' => $this->request->getVar('deskripsi_2'),
+            'deskripsi3' => $this->request->getVar('deskripsi_3'),
+            'deskripsi4' => $this->request->getVar('deskripsi_4'),
+            'deskripsi5' => $this->request->getVar('deskripsi_5'),
+            'deskripsi6' => $this->request->getVar('deskripsi_6'),
+            'deskripsi7' => $this->request->getVar('deskripsi_7'),
+            'deskripsi8' => $this->request->getVar('deskripsi_8'),
+            'deskripsi9' => $this->request->getVar('deskripsi_9')
+
+        ])) {
+            session()->setFlashdata('porto', 'Di Tambahkan! ');
+            return redirect()->to(base_url('Home/kelolapaket'));
+        }
+    }
+
+    public function edit_paket($id)
+    {
+
+        $daftarpaket = $this->DaftarPaketModel->where('id', $id)->first();
+        $data = [
+            'title' => "SatSetWeb || Edit Daftar Paket",
+            'daftarpaket' => $daftarpaket
+        ];
+        return view('admin/edit_paket', $data);
+    }
+
+    public function updatePaket($id)
+    {
+        //Masukkan Data Ke Website
+        if ($this->DaftarPaketModel->save([
+            'id' => $id,
+            'namapaket' => $this->request->getVar('nama_paket'),
+            'hargapaket' => $this->request->getVar('harga_paket'),
+            'deskripsi1' => $this->request->getVar('deskripsi_1'),
+            'deskripsi2' => $this->request->getVar('deskripsi_2'),
+            'deskripsi3' => $this->request->getVar('deskripsi_3'),
+            'deskripsi4' => $this->request->getVar('deskripsi_4'),
+            'deskripsi5' => $this->request->getVar('deskripsi_5'),
+            'deskripsi6' => $this->request->getVar('deskripsi_6'),
+            'deskripsi7' => $this->request->getVar('deskripsi_7'),
+            'deskripsi8' => $this->request->getVar('deskripsi_8'),
+            'deskripsi9' => $this->request->getVar('deskripsi_9')
+
+        ])) {
+            session()->setFlashdata('porto', 'Di Tambahkan! ');
+            return redirect()->to(base_url('Home/kelolapaket'));
+        }
+    }
+
+    public function hapus_paket($id)
+    {
+        if ($this->DaftarPaketModel->delete($id)) {
+            session()->setFlashdata('porto', 'Di Hapus! ');
+            return redirect()->to(base_url('Home/kelolapaket'));
+        }
     }
 
     public function kelolaform()

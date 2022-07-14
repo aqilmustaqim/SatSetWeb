@@ -27,108 +27,35 @@
         <div class="row justify-content-center mx-3">
 
             <!-- Paket 1 -->
-            <div class="col-sm-3">
-                <div class="card text-center">
-                    <h5 class="card-header bg-primary text-light fw-bold pt-4 pb-4">
-                        Blog Pribadi
-                    </h5>
-                    <div class="card-body">
-                        <h2 class="card-title fw-bold mt-3 mb-4">Rp42.075,00</h2>
-                        <p class="card-text">Cocok untuk anda yang hobi menuangkan pemikiran baik dalam bentuk tulisan seperti berita, ataupun opini pribadi.</p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">up to 4 Halaman Awal</li>
-                        <li class="list-group-item">1x Revisi Desain</li>
-                        <li class="list-group-item">SSD Storage 500 MB</li>
-                        <li class="list-group-item">Free Setup 6 Konten</li>
-                        <li class="list-group-item">Free G-Analytic & Webmaster</li>
-                        <li class="list-group-item">Gratis Domain</li>
-                        <li class="list-group-item">Gratis SSL Selamanya</li>
-                        <li class="list-group-item">Mobile Friendly</li>
-                    </ul>
-                    <div class="card-body">
-                        <a href="#Form" class="btn btn-primary rounded-pill my-2 px-4"> Order Sekarang </a>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Paket 2 -->
-            <div class="col-sm-3">
-                <div class="card text-center">
-                    <h5 class="card-header bg-primary text-light fw-bold pt-4 pb-4">
-                        Website Perusahaan
-                    </h5>
-                    <div class="card-body">
-                        <h2 class="card-title fw-bold mt-3 mb-4">Rp99.552,00</h2>
-                        <p class="card-text">Cocok untuk anda selaku pebisnis atau perusahaan yang menjual produk atau jasa secara B2B seperti kontraktor, konsultan, dll.</p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">up to 4 Halaman Awal</li>
-                        <li class="list-group-item">1x Revisi Desain</li>
-                        <li class="list-group-item">Unlimited Email Bisnis</li>
-                        <li class="list-group-item">Unlimited SSD Storage</li>
-                        <li class="list-group-item">Gratis Maintenance</li>
-                        <li class="list-group-item">Gratis Domain</li>
-                        <li class="list-group-item">Gratis SSL Selamanya</li>
-                        <li class="list-group-item">Mobile Friendly</li>
-                    </ul>
-                    <div class="card-body">
-                        <a href="#Form" class="btn btn-primary rounded-pill my-2 px-4"> Order Sekarang </a>
+            <?php foreach ($daftarpaket as $dp) : ?>
+                <div class="col-sm-3">
+                    <div class="card text-center">
+                        <h5 class="card-header bg-primary text-light fw-bold pt-4 pb-4">
+                            <?= $dp['namapaket']; ?>
+                        </h5>
+                        <div class="card-body">
+                            <h2 class="card-title fw-bold mt-3 mb-4">Rp.<?= number_format($dp['hargapaket']); ?></h2>
+                            <p class="card-text"><?= $dp['deskripsi1']; ?></p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><?= $dp['deskripsi2']; ?></li>
+                            <li class="list-group-item"><?= $dp['deskripsi3']; ?></li>
+                            <li class="list-group-item"><?= $dp['deskripsi4']; ?></li>
+                            <li class="list-group-item"><?= $dp['deskripsi5']; ?></li>
+                            <li class="list-group-item"><?= $dp['deskripsi6']; ?></li>
+                            <li class="list-group-item"><?= $dp['deskripsi7']; ?></li>
+                            <li class="list-group-item"><?= $dp['deskripsi8']; ?></li>
+                            <li class="list-group-item"><?= $dp['deskripsi9']; ?></li>
+                        </ul>
+                        <div class="card-body">
+                            <a href="#Form" class="btn btn-primary rounded-pill my-2 px-4"> Order Sekarang </a>
+                        </div>
                     </div>
                 </div>
-            </div>
+            <?php endforeach; ?>
 
-            <!-- Paket 3 -->
-            <div class="col-sm-3">
-                <div class="card text-center">
-                    <h5 class="card-header bg-primary text-light fw-bold pt-4 pb-4">
-                        Toko Online
-                    </h5>
-                    <div class="card-body">
-                        <h2 class="card-title fw-bold mt-3 mb-4">Rp95.265,00</h2>
-                        <p class="card-text">Cocok untuk anda selaku pebisnis atau UMKM yang menjual produk secara langsung seperti fashion, kuliner, dll.</p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">up to 4 Halaman Awal</li>
-                        <li class="list-group-item">1x Revisi Desain</li>
-                        <li class="list-group-item">Unlimited SSD Storage</li>
-                        <li class="list-group-item">Pembayaran Otomatis</li>
-                        <li class="list-group-item">Integrasi Marketplace</li>
-                        <li class="list-group-item">Gratis Domain</li>
-                        <li class="list-group-item">Gratis SSL Selamanya</li>
-                        <li class="list-group-item">Mobile Friendly</li>
-                    </ul>
-                    <div class="card-body">
-                        <a href="#Form" class="btn btn-primary rounded-pill my-2 px-4"> Order Sekarang </a>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Paket 4 -->
-            <div class="col-sm-3">
-                <div class="card text-center">
-                    <h5 class="card-header bg-primary text-light fw-bold pt-4 pb-4">
-                        Website Donasi
-                    </h5>
-                    <div class="card-body">
-                        <h2 class="card-title fw-bold mt-3 mb-4">Rp149.681,00</h2>
-                        <p class="card-text">Cocok untuk anda yang memiliki yayasan, pondok pesantren, organisasi non-profit, panitia dewan kemakmuran masjid, dll.</p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">up to 6 Halaman Awal</li>
-                        <li class="list-group-item">2x Revisi Desain</li>
-                        <li class="list-group-item">SSD Storage 500 MB</li>
-                        <li class="list-group-item">Free Setup 6 Konten</li>
-                        <li class="list-group-item">Free G-Analytic & Webmaster</li>
-                        <li class="list-group-item">Gratis Domain</li>
-                        <li class="list-group-item">Gratis SSL Selamanya</li>
-                        <li class="list-group-item">Mobile Friendly</li>
-                    </ul>
-                    <div class="card-body">
-                        <a href="#Form" class="btn btn-primary rounded-pill my-2 px-4"> Order Sekarang </a>
-                    </div>
-                </div>
-            </div>
         </div>
 </section><!-- End Daftar Paket Section -->
 
